@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb10c02f-2a9f-4d4e-9df6-b7b78384195d" name="Default" comment="" />
+    <list default="true" id="fb10c02f-2a9f-4d4e-9df6-b7b78384195d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="omp-dsl.iml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omp-dsl.iml">
+      <file leaf-file-name="Node.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/omp/task/layout/Node.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="260">
+              <caret line="58" column="73" lean-forward="false" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -25,9 +27,28 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/commit.bat" />
+        <option value="$PROJECT_DIR$/src/com/omp/task/builders/MailboxFeatures.kt" />
+        <option value="$PROJECT_DIR$/src/com/omp/task/layout/Node.kt" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -36,6 +57,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1050" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -55,6 +77,96 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp-dsl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KotlinJavaRuntime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp-dsl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KotlinJavaRuntime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotlin-stdlib.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp-dsl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KotlinJavaRuntime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotlin-stdlib.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp-dsl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KotlinJavaRuntime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotlin-stdlib.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="text" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp-dsl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="omp-dsl" />
@@ -82,6 +194,18 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -93,7 +217,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="omp-dsl" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="builders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -119,7 +259,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.com.omp.task.builders.MailboxFeaturesKt">
+    <configuration default="false" name="com.omp.task.builders.MailboxFeaturesKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.omp.task.builders.MailboxFeaturesKt" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="omp-dsl" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -244,6 +397,14 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Kotlin.com.omp.task.builders.MailboxFeaturesKt" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Kotlin.com.omp.task.builders.MailboxFeaturesKt" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -269,17 +430,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -297,11 +460,323 @@
     <breakpoint-manager />
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/commit.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Primitives.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="522" column="24" lean-forward="false" selection-start-line="522" selection-start-column="24" selection-end-line="522" selection-end-column="24" />
+          <folding>
+            <marker date="1499889051453" expanded="false" signature="0:600" ph="/ Copyright 2010-2017 JetBrains s.r.o. .../" />
+            <marker date="1499889051453" expanded="true" signature="656:805" ph="/** Represents a 8-bit signed integer. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="875:8783" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="898:1205" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="908:1001" ph="/** A constant holding the minimum value an instance of Byte can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="1059:1152" ph="/** A constant holding the maximum value an instance of Byte can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="1211:1457" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="1524:1770" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="1829:2075" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="2132:2378" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="2436:2682" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="2741:2987" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="8785:8936" ph="/** Represents a 16-bit signed integer. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9008:16926" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="9031:9346" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="9041:9135" ph="/** A constant holding the minimum value an instance of Short can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9196:9290" ph="/** A constant holding the maximum value an instance of Short can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9352:9598" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9656:9902" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9970:10216" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="10273:10519" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="10577:10823" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="10882:11128" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="16928:17077" ph="/** Represents a 32-bit signed integer. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="17145:25825" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="17168:17485" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="17178:17270" ph="/** A constant holding the minimum value an instance of Int can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="17334:17426" ph="/** A constant holding the maximum value an instance of Int can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="17491:17737" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="17795:18041" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="18100:18346" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="18412:18658" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="18716:18962" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="19021:19267" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="25827:25977" ph="/** Represents a 64-bit signed integer. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="26047:34791" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="26070:26416" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="26080:26173" ph="/** A constant holding the minimum value an instance of Long can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="26253:26346" ph="/** A constant holding the maximum value an instance of Long can have. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="26422:26668" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="26726:26972" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27031:27277" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27334:27580" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27647:27893" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27952:28198" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="34793:34977" ph="/** Represents a single-precision 32-bit IEEE 754 floating point number. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="35049:42847" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35072:35746" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35082:35175" ph="/** A constant holding the smallest positive nonzero value of Float. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="35221:35310" ph="/** A constant holding the largest positive finite value of Float. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="35356:35439" ph="/** A constant holding the positive infinity value of Float. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="35493:35576" ph="/** A constant holding the negative infinity value of Float. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="35630:35710" ph="/** A constant holding the &quot;not a number&quot; value of Float. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="35752:35998" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="36056:36302" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="36361:36607" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="36664:36910" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="36968:37214" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="37282:37528" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="42849:43034" ph="/** Represents a double-precision 64-bit IEEE 754 floating point number. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43108:50950" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="43131:43815" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="43141:43235" ph="/** A constant holding the smallest positive nonzero value of Double. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43282:43372" ph="/** A constant holding the largest positive finite value of Double. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43419:43503" ph="/** A constant holding the positive infinity value of Double. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43558:43642" ph="/** A constant holding the negative infinity value of Double. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43697:43778" ph="/** A constant holding the &quot;not a number&quot; value of Double. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43821:44067" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="44125:44371" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="44430:44676" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="44733:44979" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="45037:45283" ph="/** Compares this value with the specified value for order. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="45342:45588" ph="/** Compares this value with the specified value for order. ...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/omp-dsl.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="319">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/text/Strings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+          <folding>
+            <marker date="1499889051453" expanded="false" signature="0:600" ph="/ Copyright 2010-2016 JetBrains s.r.o. .../" />
+            <marker date="1499889051453" expanded="true" signature="728:856" ph="/** Returns a sub sequence of this char sequence having leading and trailing characters matching the [predicate] trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="937:1482" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="1055:1430" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="1188:1306" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="1320:1424" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="1484:1582" ph="/** Returns a string with leading and trailing characters matching the [predicate] trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="1712:1827" ph="/** Returns a sub sequence of this char sequence having leading characters matching the [predicate] trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="1913:2046" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="2048:2133" ph="/** Returns a string with leading characters matching the [predicate] trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="2273:2389" ph="/** Returns a sub sequence of this char sequence having trailing characters matching the [predicate] trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="2473:2614" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="2616:2702" ph="/** Returns a string with trailing characters matching the [predicate] trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="2838:2964" ph="/** Returns a sub sequence of this char sequence having leading and trailing characters from the [chars] array trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="3052:3148" ph="/** Returns a string with leading and trailing characters from the [chars] array trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="3224:3350" ph="/** Returns a sub sequence of this char sequence having leading and trailing characters from the [chars] array trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="3448:3544" ph="/** Returns a string with leading and trailing characters from the [chars] array trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="3630:3744" ph="/** Returns a sub sequence of this char sequence having trailing characters from the [chars] array trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="3838:3922" ph="/** Returns a string with trailing characters from the [chars] array trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="4004:4107" ph="/** Returns a sub sequence of this char sequence having leading and trailing whitespace trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="4181:4254" ph="/** Returns a string with leading and trailing whitespace trimmed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="4367:4457" ph="/** Returns a sub sequence of this char sequence having leading whitespace removed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="4541:4601" ph="/** Returns a string with leading whitespace removed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="4724:4815" ph="/** Returns a sub sequence of this char sequence having trailing whitespace removed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="4895:4956" ph="/** Returns a string with trailing whitespace removed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="5075:5574" ph="/** Returns a char sequence with content of this char sequence padded at the beginning ...*/" />
+            <marker date="1499889051453" expanded="true" signature="5656:5980" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="5982:6428" ph="/** Pads the string to the specified [length] at the beginning with the specified character or space. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="6569:7062" ph="/** Returns a char sequence with content of this char sequence padded at the end ...*/" />
+            <marker date="1499889051453" expanded="true" signature="7142:7466" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="7468:7908" ph="/** Pads the string to the specified [length] at the end with the specified character or space. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="8045:8128" ph="/** Returns `true` if this nullable char sequence is either `null` or empty. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="8250:8332" ph="/** Returns `true` if this char sequence is empty (contains no characters). ...*/" />
+            <marker date="1499889051453" expanded="true" signature="8426:8487" ph="/** Returns `true` if this char sequence is not empty. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="8710:8832" ph="/** Returns `true` if this char sequence is not empty and contains some characters except of whitespace characters. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="8928:9055" ph="/** Returns `true` if this nullable char sequence is either `null` or empty or consists solely of whitespace characters. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9175:9237" ph="/** Iterator for characters of the given char sequence. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9322:9469" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="9635:9714" ph="/** Returns the range of valid character indices for this char sequence. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9784:9877" ph="/** Returns the index of the last character in the char sequence or -1 if it is empty. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="9946:10045" ph="/** Returns `true` if this CharSequence has Unicode surrogate pair at the specified [index]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="10110:10240" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="10242:10315" ph="/** Returns a substring specified by the given [range] of indices. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="10419:10516" ph="/** Returns a subsequence of this char sequence specified by the given [range] of indices. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="10636:10850" ph="/** Returns a subsequence of this char sequence. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="11163:11464" ph="/** Returns a substring of chars from a range of this char sequence starting at the [startIndex] and ending right before the [endIndex]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="11631:11731" ph="/** Returns a substring of chars at indices from the specified [range] of this char sequence. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="11854:12048" ph="/** Returns a substring before the first occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="12146:12259" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="12261:12455" ph="/** Returns a substring before the first occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="12555:12668" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="12670:12863" ph="/** Returns a substring after the first occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="12960:13082" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="13084:13277" ph="/** Returns a substring after the first occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="13376:13513" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="13515:13708" ph="/** Returns a substring before the last occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="13810:13927" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="13929:14122" ph="/** Returns a substring before the last occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="14226:14343" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="14345:14537" ph="/** Returns a substring after the last occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="14638:14764" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="14766:14958" ph="/** Returns a substring after the last occurrence of [delimiter]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="15061:15202" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="15204:15527" ph="/** Returns a char sequence with content of this char sequence where its part at the given range ...*/" />
+            <marker date="1499889051453" expanded="true" signature="15638:15920" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="15922:16188" ph="/** Replaces the part of the string at the given range with the [replacement] char sequence. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="16415:16648" ph="/** Returns a char sequence with content of this char sequence where its part at the given [range] ...*/" />
+            <marker date="1499889051453" expanded="true" signature="16818:16982" ph="/** Replace the part of string at the given [range] with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="17179:17518" ph="/** Returns a char sequence with content of this char sequence where its part at the given range is removed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="17601:17965" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="17967:18246" ph="/** Removes the part of a string at a given range. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="18431:18616" ph="/** Returns a char sequence with content of this char sequence where its part at the given [range] is removed. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="18736:18865" ph="/** Removes the part of a string at the given [range]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="19020:19205" ph="/** If this char sequence starts with the given [prefix], returns a new char sequence ...*/" />
+            <marker date="1499889051453" expanded="true" signature="19279:19402" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="19309:19366" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="19404:19551" ph="/** If this string starts with the given [prefix], returns a copy of this string ...*/" />
+            <marker date="1499889051453" expanded="true" signature="19613:19708" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="19643:19690" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="19710:19893" ph="/** If this char sequence ends with the given [suffix], returns a new char sequence ...*/" />
+            <marker date="1499889051453" expanded="true" signature="19967:20092" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="19995:20056" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="20094:20239" ph="/** If this string ends with the given [suffix], returns a copy of this string ...*/" />
+            <marker date="1499889051453" expanded="true" signature="20301:20406" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="20329:20388" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="20408:20658" ph="/** When this char sequence starts with the given [prefix] and ends with the given [suffix], ...*/" />
+            <marker date="1499889051453" expanded="true" signature="20759:20963" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="20854:20927" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="20965:21152" ph="/** Removes from a string both the given [prefix] and [suffix] if and only if ...*/" />
+            <marker date="1499889051453" expanded="true" signature="21241:21425" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="21336:21407" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="21427:21669" ph="/** When this char sequence starts with and ends with the given [delimiter], ...*/" />
+            <marker date="1499889051453" expanded="true" signature="21794:21996" ph="/** Removes the given [delimiter] string from both the start and the end of this string ...*/" />
+            <marker date="1499889051453" expanded="true" signature="22109:22340" ph="/** Replace part of string before the first occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="22457:22586" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="22588:22819" ph="/** Replace part of string before the first occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="22938:23067" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="23069:23299" ph="/** Replace part of string after the first occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="23415:23553" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="23555:23785" ph="/** Replace part of string after the first occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="23903:24056" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="24058:24287" ph="/** Replace part of string after the last occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="24409:24566" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="24568:24797" ph="/** Replace part of string after the last occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="24917:25059" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="25061:25291" ph="/** Replace part of string before the last occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="25412:25545" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="25547:25777" ph="/** Replace part of string before the last occurrence of given delimiter with the [replacement] string. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="25900:26033" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="26267:26644" ph="/** Returns a new string obtained by replacing each substring of this char sequence that matches the given regular expression ...*/" />
+            <marker date="1499889051453" expanded="true" signature="26791:27069" ph="/** Returns a new string obtained by replacing each substring of this char sequence that matches the given regular expression ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27244:27507" ph="/** Replaces the first occurrence of the given regular expression [regex] in this char sequence with specified [replacement] expression. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27665:27750" ph="/** Returns `true` if this char sequence matches the given regular expression. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="27870:28049" ph="/** Implementation of [regionMatches] for CharSequences. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="28193:28531" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="28334:28362" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="28395:28513" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="28533:28617" ph="/** Returns `true` if this char sequence starts with the specified character. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="28766:28848" ph="/** Returns `true` if this char sequence ends with the specified character. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="29003:29084" ph="/** Returns `true` if this char sequence starts with the specified prefix. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="29180:29364" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="29366:29508" ph="/** Returns `true` if a substring of this char sequence starting at the specified offset [startIndex] starts with the specified prefix. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="29621:29826" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="29828:29907" ph="/** Returns `true` if this char sequence ends with the specified suffix. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="30001:30204" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="30236:30584" ph="/** Returns the longest string `prefix` such that this char sequence and [other] char sequence both start with this prefix, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="30684:30999" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="30843:30862" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="30938:30957" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="31001:31347" ph="/** Returns the longest string `suffix` such that this char sequence and [other] char sequence both end with this suffix, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="31447:31912" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="31707:31726" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="31829:31848" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="32056:32703" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="32116:32315" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="32461:32684" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="32705:33109" ph="/** Finds the index of the first occurrence of any of the specified [chars] in this char sequence, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="33293:33827" ph="/** Finds the index of the last occurrence of any of the specified [chars] in this char sequence, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="34158:34741" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="34385:34557" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="34432:34551" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="34563:34725" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="34596:34719" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="34880:35791" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="34924:35121" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35262:35512" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35295:35506" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35518:35772" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35551:35766" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="35793:36481" ph="/** Finds the first occurrence of any of the specified [strings] in this char sequence, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="36679:37498" ph="/** Finds the last occurrence of any of the specified [strings] in this char sequence, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="37707:38368" ph="/** Finds the index of the first occurrence of any of the specified [strings] in this char sequence, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="38565:39360" ph="/** Finds the index of the last occurrence of any of the specified [strings] in this char sequence, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="39581:39904" ph="/** Returns the index within this string of the first occurrence of the specified character, starting from the specified [startIndex]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="40004:40164" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="40166:40499" ph="/** Returns the index within this char sequence of the first occurrence of the specified [string], ...*/" />
+            <marker date="1499889051453" expanded="true" signature="40603:40759" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="40761:41225" ph="/** Returns the index within this char sequence of the last occurrence of the specified character, ...*/" />
+            <marker date="1499889051453" expanded="true" signature="41337:41505" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="41507:41969" ph="/** Returns the index within this char sequence of the last occurrence of the specified [string], ...*/" />
+            <marker date="1499889051453" expanded="true" signature="42085:42253" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="42255:42472" ph="/** Returns `true` if this char sequence contains the specified [other] sequence of characters as a substring. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="42761:42952" ph="/** Returns `true` if this char sequence contains the specified character [char]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43144:43264" ph="/** Returns `true` if this char sequence contains at least one match of the specified regular expression [regex]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="43629:45561" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="43710:45559" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44017:45016" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44056:44133" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44151:45006" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44240:44366" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44388:44962" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44497:44635" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="44661:44944" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="45056:45406" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="45448:45553" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="45563:46196" ph="/** Returns a sequence of index ranges of substrings in this char sequence around occurrences of the specified [delimiters]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="46349:46603" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="46606:47502" ph="/** Returns a sequence of index ranges of substrings in this char sequence around occurrences of the specified [delimiters]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="47663:47983" ph="{...}" />
+            <marker date="1499889051453" expanded="true" signature="47996:48642" ph="/** Splits this char sequence to a sequence of strings around occurrences of the specified [delimiters]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="48876:49541" ph="/** Splits this char sequence to a list of strings around occurrences of the specified [delimiters]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="49774:50118" ph="/** Splits this char sequence to a sequence of strings around occurrences of the specified [delimiters]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="50350:50690" ph="/** Splits this char sequence to a list of strings around occurrences of the specified [delimiters]. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="50921:51140" ph="/** Splits this char sequence around matches of the given regular expression. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="51278:51408" ph="/** Splits this char sequence to a sequence of lines delimited by any of the following character sequences: CRLF, LF or CR. ...*/" />
+            <marker date="1499889051453" expanded="true" signature="51505:51633" ph="/** Splits this char sequence to a list of lines delimited by any of the following character sequences: CRLF, LF or CR. ...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/omp/task/builders/MailboxFeatures.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <marker date="1508850981031" expanded="true" signature="64:97" ph="/** Created by gokul-4192. ...*/" />
+            <marker date="1508850981031" expanded="true" signature="128:301" ph="{...}" />
+            <marker date="1508850981031" expanded="true" signature="170:270" ph="{...}" />
+            <marker date="1508850981031" expanded="true" signature="185:264" ph="{...}" />
+            <marker date="1508850981031" expanded="true" signature="204:220" ph="{...}" />
+            <marker date="1508850981031" expanded="true" signature="238:254" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/omp/task/layout/Node.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="58" column="73" lean-forward="false" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
           <folding />
         </state>
       </provider>
