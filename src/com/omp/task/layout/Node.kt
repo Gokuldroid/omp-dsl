@@ -1,5 +1,12 @@
 package com.omp.task.layout
 
+import java.awt.Toolkit.getDefaultToolkit
+import javafx.scene.input.Clipboard.getSystemClipboard
+import java.awt.Toolkit
+import java.awt.datatransfer.StringSelection
+
+
+
 /**
  * Created by gokul-4192.
  */
@@ -8,8 +15,7 @@ class Node {
     var parentNode: Node? = null
     var id: Int? = null
     var componetId: Int? = null
-    var emberComponent: String? = null
-    var componentHandler: String? = null
+    var emberComponent: EmberComponent? = null
     var label: String? = null
     var visible: Boolean = true
     var enabled: Boolean = true
@@ -56,10 +62,10 @@ class Node {
         id = layoutComponentStartId
         with(sb) {
             addParam("COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + id!!)
-            parentNode?.also { addParam("PARENT_GROUP_ID", taskId + "_" + it.id!!) }
+            parentNode?.also { addParam("PARENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + it.id!!) }
             componetId?.also { addParam("COMPONENT_ID", "O365Components:COMPONENT_ID:" + it) }
-            emberComponent?.also { addParam("EMBER_COMPONENT", it) }
-            componentHandler?.also { addParam("COMPONENT_HANDLER", it) }
+            emberComponent?.also { addParam("EMBER_COMPONENT", it.componentName) }
+            emberComponent?.also { addParam("COMPONENT_HANDLER", it.handler) }
             label?.also { addParam("LABEL", "o365.input_fields." + label) }
             addParam("IS_VISIBLE", visible)
             addParam("IS_ENABLED", enabled)
@@ -90,5 +96,12 @@ class Node {
 
     companion object {
         var layoutComponentStartId: Int = 0
+    }
+
+    fun copyToClipBoard(){
+        val myString = toString()
+        val stringSelection = StringSelection(myString)
+        val clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard()
+        clpbrd.setContents(stringSelection, null)
     }
 }
