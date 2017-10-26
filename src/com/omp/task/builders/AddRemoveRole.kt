@@ -17,16 +17,36 @@ fun main(args: Array<String>) {
                 node {
                     styleClass = "form-horizontal align-right o365-ml-m22"
                     node {
-                        label = "add_remove_roles"
+                        styleClass = "form-group"
+                        node {
+                            label = "add_remove_roles"
+                            htmlTag = "label"
+                            styleClass = "col-md-4 control-label o365-pt-0"
+                        }
+                        node {
+                            styleClass = "col-md-7"
+                            node {
+                                componetId = 48
+                                emberComponent = EmberComponent.RADIO_GROUP
+                            }
+                        }
                     }
                     node {
-                        componetId = 48
-                        emberComponent = EmberComponent.RADIO_GROUP
-                    }
-                    node {
-                        label = "exchange_role"
-                        componetId = 49
-                        emberComponent = EmberComponent.REP_POPUP
+                        styleClass = "from-group"
+                        node {
+                            label = "exchange_role"
+                            styleClass = "col-md-4 control-label"
+                        }
+                        node {
+                            styleClass = "col-md-7 o365-valign-top"
+                            node {
+                                styleClass = "input-group static"
+                                node {
+                                    componetId = 35
+                                    emberComponent = EmberComponent.REP_POPUP
+                                }
+                            }
+                        }
                     }
                 }
             }
