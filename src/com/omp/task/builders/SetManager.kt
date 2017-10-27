@@ -20,6 +20,7 @@ fun main(args: Array<String>) {
                         node {
                             htmlTag = "label"
                             styleClass = "col-md-4 control-label"
+
                             node {
                                 htmlTag = "span"
                                 styleClass = "o365-nowrap"
@@ -29,10 +30,8 @@ fun main(args: Array<String>) {
                         node {
                             styleClass = "col-md-7 o365-valign-top"
                             node {
-                                styleClass = "input-group static"
                                 node {
-                                    componetId = 35
-                                    label = "manager"
+                                    componetId = "MANAGER"
                                     emberComponent = EmberComponent.REP_POPUP
                                 }
                             }

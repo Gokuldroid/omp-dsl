@@ -1,5 +1,6 @@
 package com.omp.task.layout
 
+import org.apache.commons.lang3.StringEscapeUtils
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 
@@ -11,9 +12,10 @@ import java.awt.datatransfer.StringSelection
 class Node {
     var parentNode: Node? = null
     var id: Int? = null
-    var componetId: Int? = null
+    var componetId: Any? = null
     var emberComponent: EmberComponent? = null
     var label: String? = null
+    var labelWrapper: String? = null
     var visible: Boolean = true
     var enabled: Boolean = true
     var mandatory: Boolean = false
@@ -63,7 +65,10 @@ class Node {
             componetId?.also { addParam("COMPONENT_ID", "O365Components:COMPONENT_ID:" + it) }
             emberComponent?.also { addParam("EMBER_COMPONENT", it.componentName) }
             emberComponent?.also { addParam("COMPONENT_HANDLER", it.handler) }
-            label?.also { addParam("LABEL", "o365.input_fields." + label) }
+            if (labelWrapper == null)
+                label?.also { addParam("LABEL", "o365.input_fields." + label) }
+            else
+                addParam("LABEL", StringEscapeUtils.escapeHtml4(labelWrapper!!.format("{{o365.input_fields." + label!! + "}}")))
             addParam("IS_VISIBLE", visible)
             addParam("IS_ENABLED", enabled)
             addParam("IS_MANDATORY", mandatory)

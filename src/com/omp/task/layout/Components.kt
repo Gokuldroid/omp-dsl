@@ -11,3 +11,19 @@ enum class EmberComponent(val componentName: String, val handler: String) {
     RADIO_GROUP("management.input.radio-group", "RadioGroupComponent"),
     TEXT("management.input.text-box", "SingleLineComponent"),
 }
+
+class AbsTractComponent() {
+    var id: String? = null
+    var name: String? = null
+    var regex: String? = null
+    var parmName: String? = null
+    var dataTable: String? = null
+    var inputFieldType: String? = null
+    var dataType: ObjectType? = null
+
+    override fun toString(): String {
+         return ""
+    }
+}
+
+val O365DropdownRadioMenuVals = "O365DropdownRadioMenuVals"
