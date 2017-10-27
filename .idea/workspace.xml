@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb10c02f-2a9f-4d4e-9df6-b7b78384195d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-lang3-3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/omp/task/builders/MailboxDelegation.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/META-INF/omp-dsl.kotlin_module" afterPath="$PROJECT_DIR$/out/production/omp-dsl/META-INF/omp-dsl.kotlin_module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/AddRemoveRoleKt$main$1$1$1$1$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/AddRemoveRoleKt$main$1$1$1$1$1$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/AddRemoveRoleKt$main$1$1$1$1$2$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/AddRemoveRoleKt$main$1$1$1$1$2$2$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1$2.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1$3.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt$main$node$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LicenseModificationKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$1$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$2$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$2$2$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$3$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$3$2$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$1$2$1$3$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$2$1$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$2$1$1$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$2$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$2$1$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$2$1$2$2$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/LitigationHoldChangesKt$main$1$2$1$2$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$2.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$3.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$4.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$1$1$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$2$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$2$1$2.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$2$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$2$1$3.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/MailboxFeaturesKt$main$root$1$2$1$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/SetManagerKt$main$node$1$1$1$1$1$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/builders/SetManagerKt$main$node$1$1$1$1$1$2$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/layout/Node$Companion.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/layout/Node$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/layout/Node.class" afterPath="$PROJECT_DIR$/out/production/omp-dsl/com/omp/task/layout/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omp-dsl.iml" afterPath="$PROJECT_DIR$/omp-dsl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/omp/task/builders/LicenseModification.kt" afterPath="$PROJECT_DIR$/src/com/omp/task/builders/LicenseModification.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/omp/task/builders/MailboxFeatures.kt" afterPath="$PROJECT_DIR$/src/com/omp/task/builders/MailboxFeatures.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/omp/task/builders/SetManager.kt" afterPath="$PROJECT_DIR$/src/com/omp/task/builders/SetManager.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/omp/task/layout/Components.kt" afterPath="$PROJECT_DIR$/src/com/omp/task/layout/Components.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/omp/task/layout/Node.kt" afterPath="$PROJECT_DIR$/src/com/omp/task/layout/Node.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,14 +16,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LicenseModification.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/omp/task/builders/LicenseModification.kt">
+      <file leaf-file-name="MailboxStorageLimits.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/omp/task/builders/MailboxStorageLimits.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-              <folding>
-                <element signature="e#31#104#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="522">
+              <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,10 +56,11 @@
         <option value="$PROJECT_DIR$/src/com/omp/task/layout/ObjectType.java" />
         <option value="$PROJECT_DIR$/src/com/omp/task/layout/ObjectType.kt" />
         <option value="$PROJECT_DIR$/src/com/omp/task/layout/Components.kt" />
-        <option value="$PROJECT_DIR$/src/com/omp/task/layout/Node.kt" />
         <option value="$PROJECT_DIR$/src/com/omp/task/builders/LicenseModification.kt" />
         <option value="$PROJECT_DIR$/src/com/omp/task/builders/SetManager.kt" />
         <option value="$PROJECT_DIR$/src/com/omp/task/builders/MailboxFeatures.kt" />
+        <option value="$PROJECT_DIR$/src/com/omp/task/layout/Node.kt" />
+        <option value="$PROJECT_DIR$/src/com/omp/task/builders/MailboxStorageLimits.kt" />
       </list>
     </option>
   </component>
@@ -497,6 +461,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -506,7 +471,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29957357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29957357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -809,30 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/omp/task/layout/Node.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding>
-            <marker date="1509025439037" expanded="true" signature="36:147" ph="..." />
-            <marker date="1509025439037" expanded="true" signature="150:183" ph="/** Created by gokul-4192. ...*/" />
-            <marker date="1509025439037" expanded="true" signature="196:3610" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="871:938" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="989:1128" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="1145:1176" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="1198:1230" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="1251:1281" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="1320:3086" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="1498:2918" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="3011:3058" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="3145:3220" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="3255:3289" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="3312:3363" ph="{...}" />
-            <marker date="1509025439037" expanded="true" signature="3391:3608" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/omp/task/builders/SetManager.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -927,11 +868,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/omp/task/builders/LicenseModification.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        <state relative-caret-position="325">
+          <caret line="42" column="61" lean-forward="true" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
           <folding>
-            <element signature="e#31#104#0" expanded="true" />
+            <marker date="1509090383956" expanded="true" signature="38:104" ph="..." />
+            <marker date="1509090383956" expanded="true" signature="106:139" ph="/** Created by gokul-4192. ...*/" />
+            <marker date="1509090383956" expanded="true" signature="170:1990" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="216:1970" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="258:1964" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="314:1954" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="401:1940" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="502:1120" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="583:783" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="813:1098" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="900:1072" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="1145:1750" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="1226:1418" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="1448:1728" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="1535:1702" ph="{...}" />
+            <marker date="1509090383956" expanded="true" signature="1776:1922" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/omp/task/layout/Node.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <marker date="1509101952506" expanded="true" signature="36:147" ph="..." />
+            <marker date="1509101952506" expanded="true" signature="150:183" ph="/** Created by gokul-4192. ...*/" />
+            <marker date="1509101952506" expanded="true" signature="196:3689" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="871:938" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="1017:1206" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="1224:1255" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="1277:1309" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="1330:1360" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="1399:3165" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="1577:2997" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="3090:3137" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="3224:3299" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="3334:3368" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="3391:3442" ph="{...}" />
+            <marker date="1509101952506" expanded="true" signature="3470:3687" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/omp/task/builders/MailboxStorageLimits.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>

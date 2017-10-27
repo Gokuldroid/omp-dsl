@@ -35,12 +35,14 @@ class Node {
         receiver?.invoke(this)
     }
 
-    fun node(receiver: (Node.() -> Unit)?): Node {
+    fun node(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
         val node = Node(this.taskId, receiver)
         node.parentNode = this
+        styleClass?.also { node.styleClass = it }
         this.childNodes.add(node)
         return node
     }
+
 
     fun hide() {
         visible = false
