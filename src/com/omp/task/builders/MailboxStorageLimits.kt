@@ -1,5 +1,6 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
 /**
@@ -14,7 +15,16 @@ fun main(args: Array<String>) {
                 node("form-horizontal align-left o365-ml-40") {
                     node("form-group") {
                         node("col-md-12 control-label") {
-
+                            htmlTag = "label"
+                            node {
+                                componetId = "MODIFY_STORAGE_LIMITS"
+                                emberComponent = EmberComponent.CHECK_BOX
+                            }
+                            node("o365-space-2") {
+                                htmlTag = "span"
+                                labelWrapper = "<span class=\"o365-thin-bold\">%s</span>"
+                                label = "Modify Storage Limits"
+                            }
                         }
                     }
                 }

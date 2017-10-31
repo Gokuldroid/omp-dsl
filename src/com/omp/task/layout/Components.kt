@@ -10,6 +10,7 @@ enum class EmberComponent(val componentName: String, val handler: String) {
     O365_LICENSES("management.input.o365-licenses", "LicensesComponent"),
     RADIO_GROUP("management.input.radio-group", "RadioGroupComponent"),
     TEXT("management.input.text-box", "SingleLineComponent"),
+    CHECK_BOX("management.input.check-box","SingleLineComponent")
 }
 
 class AbsTractComponent() {
