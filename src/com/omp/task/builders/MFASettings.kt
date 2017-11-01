@@ -7,7 +7,7 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
-    val node = Node("MFA_SETTINGS") {
+    Node("MFA_SETTINGS") {
         styleClass = "row"
         node("col-md-6") {
             node("line line-right o365-pl-20") {
@@ -49,6 +49,15 @@ fun main(args: Array<String>) {
                                 componetId = "DEFAULT_MFA_METHOD"
                             }
                         }
+                    }
+                }
+            }
+        }
+        node ("col-md-6"){
+            node("form-horizontal align-left  o365-ml-10") {
+                node("form-group") {
+                    labelNode ("col-md-12 o365-thin-bold"){
+                        label = "manage_user_settings"
                     }
                 }
             }

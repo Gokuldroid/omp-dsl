@@ -35,7 +35,7 @@ class Node {
         receiver?.invoke(this)
     }
 
-    fun node(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
+    fun node(styleClass: String? = null, receiver: (Node.() -> Unit)? = null): Node {
         val node = Node(this.taskId, receiver)
         node.parentNode = this
         styleClass?.also { node.styleClass = it }
@@ -43,6 +43,24 @@ class Node {
         return node
     }
 
+
+    fun spanNode(styleClass: String? = null, receiver: (Node.() -> Unit)? = null): Node {
+        val node = Node(this.taskId, receiver)
+        node.parentNode = this
+        node.htmlTag = "span"
+        styleClass?.also { node.styleClass = it }
+        this.childNodes.add(node)
+        return node
+    }
+
+    fun labelNode(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
+        val node = Node(this.taskId, receiver)
+        node.parentNode = this
+        node.htmlTag = "label"
+        styleClass?.also { node.styleClass = it }
+        this.childNodes.add(node)
+        return node
+    }
 
     fun hide() {
         visible = false

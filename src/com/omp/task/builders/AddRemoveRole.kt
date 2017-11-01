@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
                         node {
                             styleClass = "col-md-7"
                             node {
-                                componetId = 48
+                                componetId = "ADD_REMOVE_ROLES"
                                 emberComponent = EmberComponent.RADIO_GROUP
                             }
                         }
@@ -42,7 +42,7 @@ fun main(args: Array<String>) {
                             node {
                                 styleClass = "input-group static"
                                 node {
-                                    componetId = 35
+                                    componetId = "EXCHANGE_ROLES"
                                     emberComponent = EmberComponent.REP_POPUP
                                 }
                             }
