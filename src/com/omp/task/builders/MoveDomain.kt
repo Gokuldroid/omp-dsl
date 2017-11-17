@@ -1,5 +1,6 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
 /**
@@ -18,12 +19,15 @@ fun main(args: Array<String>) {
                     node("col-md-9") {
                         node("col-md-9") {
                             node("o365-make-inline-block o365-mw-300 pull-left o365-make-relative") {
-                                node
+                                node{
+                                    componetId = "DOMAIN"
+                                    emberComponent = EmberComponent.DR_SELECT
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
+    }.copyToClipBoard()
 }

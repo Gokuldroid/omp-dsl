@@ -62,6 +62,41 @@ class Node {
         return node
     }
 
+    fun tableNode(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
+        val node = Node(this.taskId, receiver)
+        node.parentNode = this
+        node.htmlTag = "table"
+        styleClass?.also { node.styleClass = it }
+        this.childNodes.add(node)
+        return node
+    }
+
+    fun tbodyNode(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
+        val node = Node(this.taskId, receiver)
+        node.parentNode = this
+        node.htmlTag = "tbody"
+        styleClass?.also { node.styleClass = it }
+        this.childNodes.add(node)
+        return node
+    }
+
+    fun trNode(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
+        val node = Node(this.taskId, receiver)
+        node.parentNode = this
+        node.htmlTag = "tr"
+        styleClass?.also { node.styleClass = it }
+        this.childNodes.add(node)
+        return node
+    }
+
+    fun tdNode(styleClass: String? = null, receiver: (Node.() -> Unit)?): Node {
+        val node = Node(this.taskId, receiver)
+        node.parentNode = this
+        node.htmlTag = "td"
+        styleClass?.also { node.styleClass = it }
+        this.childNodes.add(node)
+        return node
+    }
     fun hide() {
         visible = false
     }
