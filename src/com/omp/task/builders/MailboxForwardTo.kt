@@ -29,8 +29,7 @@ fun main(args: Array<String>) {
                                 tbodyNode {
                                     trNode {
                                         tdNode {
-                                            width = "220"
-                                            labelNode("radio-inline o365-ml-15") {
+                                            labelNode("radio-inline o365-ml-15 width-220") {
                                                 node {
                                                     componetId = "MAILBOX_FWD_TO_INTERNAL"
                                                     emberComponent = EmberComponent.RADIO_GROUP
@@ -52,8 +51,7 @@ fun main(args: Array<String>) {
                         tableNode {
                             trNode {
                                 tdNode {
-                                    width = "220"
-                                    labelNode("radio-inline o365-ml-15") {
+                                    labelNode("radio-inline o365-ml-15 width-220") {
                                         node {
                                             componetId = "MAILBOX_FWD_TO_EXTERNAL"
                                             emberComponent = EmberComponent.RADIO_GROUP
@@ -69,11 +67,18 @@ fun main(args: Array<String>) {
                                     }
                                 }
                             }
-                            trNode {
-                                tdNode {  }
-                                tdNode {
-                                    labelWrapper = "<span class=\"o365-lighter-text\">%s</span>"
-                                    label = "use_comma_sep_mail"
+                        }
+                    }
+                    node("form-group ifa o365-make-absolute o365-mt-m25"){
+                        node("col-md-12 deilver-to-mailbxox"){
+                            labelNode("checkbox-inline") {
+                                node {
+                                    componetId = "DELIVER_TO_MAILBOX_AND_FORWARD"
+                                    emberComponent = EmberComponent.CHECK_BOX
+                                }
+                                spanNode { styleClass = "o365-space-1" }
+                                spanNode {
+                                    label = "keep_a_copy_in_this_mailbox"
                                 }
                             }
                         }

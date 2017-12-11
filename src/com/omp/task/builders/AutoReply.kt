@@ -36,9 +36,10 @@ fun main(args: Array<String>) {
                                     label = "o365.input_fields.inside_org"
                                     styleClass = "o365-p-5"
                                     node {
-                                        styleClass = "editor editor-light o365-mh-100"
+                                        styleClass = "o365-mh-100"
                                         node {
-                                            styleClass = "uploaded-file"
+                                            componetId =  "AUTO_REPLY_INSIDE_MSG"
+                                            emberComponent = EmberComponent.RT_EDITOR
                                         }
                                     }
                                 }
@@ -47,22 +48,37 @@ fun main(args: Array<String>) {
                                     label = "o365.input_fields.outside_org"
                                     node {
                                         styleClass = "o365-mb-5"
-                                        node {
-                                            emberComponent = EmberComponent.CHECKBOX
+                                        labelNode ("checkbox-inline"){
+                                            node {
+                                                emberComponent = EmberComponent.CHECKBOX
+                                                componetId = "ENABLE_AUTO_REPLY_OUTSIDE_ORG"
+                                            }
+                                            spanNode ("o365-space-2"){  }
+                                            spanNode {
+                                                label = "auto_rep_outside_org"
+                                            }
                                         }
                                     }
                                     node {
                                         styleClass = "o365-make-relative"
                                         node {
-                                            styleClass = "editor editor-light o365-mh-100"
+                                            styleClass = "o365-mh-100"
                                             node {
-                                                styleClass = "uploaded-file"
+                                                componetId =  "AUTO_REPLY_OUTSIDE_MSG"
+                                                emberComponent = EmberComponent.RT_EDITOR
                                             }
                                         }
                                         node {
                                             styleClass = "o365-mt-5"
-                                            node {
-                                                emberComponent = EmberComponent.CHECKBOX
+                                            labelNode ("checkbox-inline"){
+                                                node {
+                                                    emberComponent = EmberComponent.CHECKBOX
+                                                    componetId = "EXCLUDE_SENDERS_NOT_IN_CONTACT"
+                                                }
+                                                spanNode ("o365-space-2"){  }
+                                                spanNode {
+                                                    label = "exculde_senders_not_in_contact"
+                                                }
                                             }
                                         }
                                     }

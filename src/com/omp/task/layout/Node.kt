@@ -157,8 +157,12 @@ class Node {
 
     fun copyToClipBoard() {
         val myString = toString()
-        val stringSelection = StringSelection(myString)
-        val clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard()
-        clpbrd.setContents(stringSelection, null)
+        myString.toClipBoard()
     }
+}
+
+fun String.toClipBoard(){
+    val stringSelection = StringSelection(this)
+    val clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard()
+    clpbrd.setContents(stringSelection, null)
 }

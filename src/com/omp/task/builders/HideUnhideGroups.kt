@@ -8,7 +8,7 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
-    Node("HIDE_UNHIDE_CONTACTS"){
+    Node("HIDE_UNHIDE_GROUPS"){
         styleClass = "row o365-mb-5"
         node {
             styleClass = "col-md-12"
