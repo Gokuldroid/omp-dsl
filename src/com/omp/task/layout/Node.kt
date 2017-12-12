@@ -27,7 +27,7 @@ class Node {
     var value: String? = null
     var tooltip: String? = null
     var placeHolderText: String? = null
-
+    var rules: StringBuilder = StringBuilder()
     val childNodes = ArrayList<Node>()
 
     constructor(taskId: String, receiver: (Node.() -> Unit)? = null) {
@@ -122,6 +122,7 @@ class Node {
             addParam("VALUE", value)
             addParam("CONDITION", condition)
         }
+        rules.append(sb.toString() + "/>".newLine())
     }
 
     override fun toString(): String {
@@ -162,9 +163,11 @@ class Node {
         var ruleId: Int = 0;
     }
 
-    fun copyToClipBoard() {
+    fun copyToClipBoard(receiver: (Node.() -> Unit)? = null) {
         var myString = toString()
         myString += "\n"
+        receiver?.invoke(this)
+        myString += rules.toString()
         myString.toClipBoard()
     }
 }
