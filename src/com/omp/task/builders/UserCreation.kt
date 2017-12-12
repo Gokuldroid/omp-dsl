@@ -9,8 +9,8 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
-    var no1: Node? = null
-    var no2: Node? = null
+    var trigger: Node? = null
+    var target: Node? = null
     var no3: Node? = null
     var no4: Node? = null
     var no5: Node? = null
@@ -20,11 +20,11 @@ fun main(args: Array<String>) {
         node("col-md-12") {
             node("static-container-sm center-block") {
                 node("form-horizontal align-right o365-ml-m22") {
-                    no1 = node {
+                    trigger = node {
                         componetId = "O365_LICENSES"
                         emberComponent = EmberComponent.O365_LICENSES
                     }
-                    no2 = node {
+                    target = node {
                         styleClass = "form-group"
                         node {
                             htmlTag = "label"
@@ -45,6 +45,6 @@ fun main(args: Array<String>) {
     }
 
     root.copyToClipBoard({
-        addRule(no1!!, no2!!, Action.HIDE, Condition.EQUAL, "demo")
+        addRule(trigger!!, target!!, Action.HIDE, Condition.EQUAL, "demo")
     })
 }
