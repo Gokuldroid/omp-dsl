@@ -66,7 +66,7 @@ fun main(args: Array<String>) {
                         }
                         node {
                             styleClass = "col-md-7 o365-valign-top"
-                            node {
+                            node ("input-md o365-mxw-50"){
                                 emberComponent = EmberComponent.TEXT
                                 componetId = "LITIGATION_HOLD_DURATION"
                             }
@@ -110,7 +110,7 @@ fun main(args: Array<String>) {
                     }
                     node {
                         styleClass = "form-column o365-valign-top"
-                        node {
+                        node("form-control notestextarea retention-comment"){
                             emberComponent = EmberComponent.TEXT
                             componetId = "RETENTION_COMMENT"
                         }
@@ -147,9 +147,9 @@ fun main(args: Array<String>) {
                     }
                     node {
                         styleClass = "form-column o365-valign-top"
-                        node {
+                        node ("form-control"){
                             emberComponent = EmberComponent.TEXT
-                            componetId = "RETENTION_COMMENT"
+                            componetId = "RETENTION_URL"
                         }
                     }
                 }

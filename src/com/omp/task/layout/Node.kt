@@ -97,6 +97,7 @@ class Node {
         this.childNodes.add(node)
         return node
     }
+
     fun hide() {
         visible = false
     }
@@ -109,6 +110,19 @@ class Node {
         enabled = true
     }
 
+    fun addRule(trigger: Node, target: Node, action: Action, condition: Condition, value: String) {
+        val sb = StringBuilder("<O365LayoutComponentRules ")
+        ruleId = ruleId.inc()
+        with(sb) {
+            addParam("UNIQUE_ID", "O365LayoutComponentRules:UNIQUE_ID:" + taskId + "_" + ruleId)
+            addParam("TASK_ID", "O365MgmtTasks:TASK_ID:" + taskId)
+            addParam("TRIGGER_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + trigger.id!!)
+            addParam("TARGET_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + target.id!!)
+            addParam("ACTION", action)
+            addParam("VALUE", value)
+            addParam("CONDITION", condition)
+        }
+    }
 
     override fun toString(): String {
         val sb = StringBuilder("<O365LayoutComponentGroup ")
@@ -143,26 +157,46 @@ class Node {
         return result
     }
 
-    fun StringBuilder.addParam(parm: String, value: Any) {
-        this.append(parm).append("=\"").append(value).append("\" ")
-    }
-
-    fun String.newLine(): String {
-        return this + "\n"
-    }
-
     companion object {
         var layoutComponentStartId: Int = 0
+        var ruleId: Int = 0;
     }
 
     fun copyToClipBoard() {
-        val myString = toString()
+        var myString = toString()
+        myString += "\n"
         myString.toClipBoard()
     }
 }
 
-fun String.toClipBoard(){
+fun String.toClipBoard() {
     val stringSelection = StringSelection(this)
-    val clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard()
+    val clpbrd = Toolkit.getDefaultToolkit().systemClipboard
     clpbrd.setContents(stringSelection, null)
+}
+
+fun StringBuilder.addParam(parm: String, value: Any) {
+    this.append(parm).append("=\"").append(value).append("\" ")
+}
+
+fun String.newLine(): String {
+    return this + "\n"
+}
+
+enum class Condition(val condition: String) {
+    EQUAL("=="),
+    ;
+
+    override fun toString(): String {
+        return condition
+    }
+}
+
+enum class Action(val action: String) {
+    HIDE("hide"),
+    SHOW("show");
+
+    override fun toString(): String {
+        return action
+    }
 }

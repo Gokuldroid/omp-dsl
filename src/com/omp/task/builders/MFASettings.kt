@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
                         }
                         node("col-md-6") {
                             node {
-                                emberComponent = EmberComponent.DR_SELECT
+                                emberComponent = EmberComponent.DR_SELECT_MUL
                                 componetId = "ALLOWED_MFA_METHODS"
                             }
                         }

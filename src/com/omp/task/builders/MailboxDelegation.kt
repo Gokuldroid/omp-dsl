@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
                         }
                     }
                     node("form-group o365-make-relative") {
-                        node("freeze o365-ml-40")
+
                         node("col-md-7 col-md-offset-4 o365-valign-top") {
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
@@ -64,7 +64,7 @@ fun main(args: Array<String>) {
                         }
                     }
                     node("form-group o365-make-relative") {
-                        node("freeze o365-ml-40")
+
                         node("col-md-7 col-md-offset-4 o365-valign-top") {
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
@@ -100,7 +100,7 @@ fun main(args: Array<String>) {
                         }
                     }
                     node("form-group o365-make-relative") {
-                        node("freeze o365-ml-40")
+
                         node("col-md-7 col-md-offset-4 o365-valign-top") {
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
