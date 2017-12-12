@@ -1,6 +1,6 @@
 package com.omp.task.cmdlets
 
-import com.omp.task.layout.toClipBoard
+import com.omp.task.utils.toClipBoard
 import java.io.File
 
 /**

@@ -1,8 +1,9 @@
 package com.omp.task.layout
 
+import com.omp.task.utils.addParam
+import com.omp.task.utils.newLine
+import com.omp.task.utils.toClipBoard
 import org.apache.commons.lang3.StringEscapeUtils
-import java.awt.Toolkit
-import java.awt.datatransfer.StringSelection
 
 
 /**
@@ -20,7 +21,7 @@ class Node {
     var enabled: Boolean = true
     var mandatory: Boolean = false
     var priority: Int? = null
-    lateinit var taskId: String
+    var taskId: String
     var htmlTag: String? = null
     var width: String? = null
     var styleClass: String? = null
@@ -172,34 +173,3 @@ class Node {
     }
 }
 
-fun String.toClipBoard() {
-    val stringSelection = StringSelection(this)
-    val clpbrd = Toolkit.getDefaultToolkit().systemClipboard
-    clpbrd.setContents(stringSelection, null)
-}
-
-fun StringBuilder.addParam(parm: String, value: Any) {
-    this.append(parm).append("=\"").append(value).append("\" ")
-}
-
-fun String.newLine(): String {
-    return this + "\n"
-}
-
-enum class Condition(val condition: String) {
-    EQUAL("=="),
-    ;
-
-    override fun toString(): String {
-        return condition
-    }
-}
-
-enum class Action(val action: String) {
-    HIDE("hide"),
-    SHOW("show");
-
-    override fun toString(): String {
-        return action
-    }
-}
