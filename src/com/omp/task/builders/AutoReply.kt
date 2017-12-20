@@ -50,7 +50,7 @@ fun main(args: Array<String>) {
                                         styleClass = "o365-mb-5"
                                         labelNode ("checkbox-inline"){
                                             node {
-                                                emberComponent = EmberComponent.CHECKBOX
+                                                emberComponent = EmberComponent.CHECK_BOX
                                                 componetId = "ENABLE_AUTO_REPLY_OUTSIDE_ORG"
                                             }
                                             spanNode ("o365-space-2"){  }
@@ -72,7 +72,7 @@ fun main(args: Array<String>) {
                                             styleClass = "o365-mt-5"
                                             labelNode ("checkbox-inline"){
                                                 node {
-                                                    emberComponent = EmberComponent.CHECKBOX
+                                                    emberComponent = EmberComponent.CHECK_BOX
                                                     componetId = "EXCLUDE_SENDERS_NOT_IN_CONTACT"
                                                 }
                                                 spanNode ("o365-space-2"){  }

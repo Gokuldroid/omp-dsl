@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     Node("MFA_SETTINGS") {
         styleClass = "row"
         node("col-md-6") {
-            node("line line-right o365-pl-20") {
+            node("line line-right  o365-pl-20") {
                 node("form-horizontal align-right") {
                     node("form-group") {
                         node("col-md-4 control-label o365-pt-0") {
@@ -22,6 +22,8 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "IS_MFA_ENABLED"
+                                value = "Enforce"
+                                mandatory()
                             }
                         }
                     }
@@ -34,6 +36,9 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.DR_SELECT_MUL
                                 componetId = "ALLOWED_MFA_METHODS"
+                                placeHolderText = "select_mfa_methods"
+                                label = "select_mfa_method"
+                                mandatory()
                             }
                         }
                     }
@@ -47,6 +52,8 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.DR_SELECT
                                 componetId = "DEFAULT_MFA_METHOD"
+                                mandatory()
+                                label = "default_mfa_method"
                             }
                         }
                     }
@@ -58,6 +65,56 @@ fun main(args: Array<String>) {
                 node("form-group") {
                     labelNode ("col-md-12 o365-thin-bold"){
                         label = "manage_user_settings"
+                    }
+                }
+//                node("form-group") {
+//                    node("col-md-12") {
+//                        node("o365-pl-20") {
+//                            labelNode("checkbox") {
+//                                node {
+//                                    componetId = "REQUIRE_CONTACTS_AGAIN"
+//                                    emberComponent = EmberComponent.CHECK_BOX
+//                                }
+//                                spanNode("o365-space-2")
+//                                spanNode {
+//                                    label = "require_contact_methods_again"
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+
+                node("form-group") {
+                    node("col-md-12") {
+                        node("o365-pl-20") {
+                            labelNode("checkbox") {
+                                node {
+                                    componetId = "DELETE_EXISTING_APP_PASSWORDS"
+                                    emberComponent = EmberComponent.CHECK_BOX
+                                }
+                                spanNode("o365-space-2")
+                                spanNode {
+                                    label = "delete_existing_app_passwords"
+                                }
+                            }
+                        }
+                    }
+                }
+
+                node("form-group") {
+                    node("col-md-12") {
+                        node("o365-pl-20") {
+                            labelNode("checkbox") {
+                                node {
+                                    componetId = "RESTORE_MFA_ALL_REMEMBERED_DEVICES"
+                                    emberComponent = EmberComponent.CHECK_BOX
+                                }
+                                spanNode("o365-space-2")
+                                spanNode {
+                                    label = "restore_mfa_all_remembered_devices"
+                                }
+                            }
+                        }
                     }
                 }
             }

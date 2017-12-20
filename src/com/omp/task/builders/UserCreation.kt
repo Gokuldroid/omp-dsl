@@ -23,6 +23,8 @@ fun main(args: Array<String>) {
                     trigger = node {
                         componetId = "O365_LICENSES"
                         emberComponent = EmberComponent.O365_LICENSES
+                        placeHolderText = "select_license"
+                        mandatory()
                     }
                     target = node {
                         styleClass = "form-group"
@@ -36,6 +38,8 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "USAGE_LOCATION"
                                 emberComponent = EmberComponent.DR_SELECT
+                                placeHolderText = "select_location"
+                                mandatory()
                             }
                         }
                     }

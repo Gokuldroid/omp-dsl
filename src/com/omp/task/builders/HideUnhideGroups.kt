@@ -19,11 +19,12 @@ fun main(args: Array<String>) {
                     node {
                         styleClass = "form-group"
                         node {
-                            styleClass = "col-md-12"
+                            styleClass = "col-md-12 col-md-push-3"
                             node {
                                 componetId = "HIDE_UNHIDE_FROM_ADDRESSLIST"
                                 emberComponent = EmberComponent.RADIO_GROUP
-                                //inputType = "RADIO_GROUP_HORIZONTAL_SPACE_5"
+                                mandatory()
+                                value = "\$true"
                             }
                         }
                     }

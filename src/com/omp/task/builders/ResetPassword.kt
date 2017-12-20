@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "RESET_PASSWORD_UI"
                                 emberComponent = EmberComponent.CHECK_BOX
+                                value = "true"
                             }
                             spanNode("o365-space-2")
                             spanNode("o365-thin-bold") {
@@ -33,6 +34,7 @@ fun main(args: Array<String>) {
                                         node {
                                             componetId = "RANDOM_PASSWORD"
                                             emberComponent = EmberComponent.RADIO_GROUP
+                                            value = "RandomPassword"
                                         }
                                     }
                                 }
@@ -80,6 +82,7 @@ fun main(args: Array<String>) {
                                         width = "100px"
                                         componetId = "CHANGE_PASSWORD_ON_NEXT_LOGON"
                                         emberComponent = EmberComponent.DR_SELECT
+                                        value = "n_a"
                                     }
                                 }
                             }
@@ -99,6 +102,7 @@ fun main(args: Array<String>) {
                                         width = "100px"
                                         componetId = "PASSWORD_NEVER_EXPIRES"
                                         emberComponent = EmberComponent.DR_SELECT
+                                        value = "n_a"
                                     }
                                 }
                             }

@@ -117,8 +117,8 @@ class Node {
         with(sb) {
             addParam("UNIQUE_ID", "O365LayoutComponentRules:UNIQUE_ID:" + taskId + "_" + ruleId)
             addParam("TASK_ID", "O365MgmtTasks:TASK_ID:" + taskId)
-            addParam("TRIGGER_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + trigger.id!!)
-            addParam("TARGET_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + target.id!!)
+            addParam("TRIGGER_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + trigger.id!!)
+            addParam("TARGET_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + target.id!!)
             addParam("ACTION", action)
             addParam("VALUE", value)
             addParam("CONDITION", condition)
@@ -149,8 +149,8 @@ class Node {
             width?.also { addParam("WIDTH", it) }
             styleClass?.also { addParam("STYLE_CLASSES", it) }
             value?.also { addParam("VALUE", it) }
-            tooltip?.also { addParam("TOOL_TIP", it) }
-            placeHolderText?.also { addParam("PLACE_HOLDER_TEXT", it) }
+            tooltip?.also { addParam("TOOL_TIP", "o365.tooltip." + it) }
+            placeHolderText?.also { addParam("PLACE_HOLDER_TEXT", "o365.input_fields."+it) }
         }
         var result = sb.append("/>").trim().toString().newLine()
         childNodes.forEach {

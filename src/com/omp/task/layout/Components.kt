@@ -13,7 +13,6 @@ enum class EmberComponent(val componentName: String, val handler: String) {
     TEXT("management.input.text-box", "SingleLineComponent"),
     CHECK_BOX("management.input.check-box","SingleLineComponent"),
     TAB_LAYOUT("management.ui.tab-layout","LayoutComponentGroupsImpl"),
-    CHECKBOX("management.input.check-box","RadioGroupComponent"),
     DATE_PICKER("management.input.date-picker","DatePickerComponent"),
     CUSTOM_ATTRIBUTES("management.input.custom-attributes", "SingleLineComponent"),
     SIZE("management.input.size-input","SingleLineComponent"),
