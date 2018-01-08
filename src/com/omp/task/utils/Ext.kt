@@ -16,3 +16,11 @@ fun StringBuilder.addParam(parm: String, value: Any) {
 fun String.newLine(): String {
     return this + "\n"
 }
+
+inline fun safeExecute(receiver: () -> Unit) {
+    try {
+        receiver.invoke()
+    }catch (e:Exception){
+
+    }
+}

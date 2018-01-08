@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -8,6 +10,9 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    var rentionHoldUI: Node? = null
+    var duration: Node? = null
+    var comment: Node? = null
     Node("MAILBOX_RETENTION_POLICY_CHANGES") {
         styleClass = "row"
         node("col-md-6") {
@@ -20,6 +25,7 @@ fun main(args: Array<String>) {
                         node {
                             emberComponent = EmberComponent.REP_POPUP
                             componetId = "RETENTION_POLICY"
+                            label = "retention_policy"
                         }
                     }
                 }
@@ -54,7 +60,7 @@ fun main(args: Array<String>) {
                 node("form-horizontal align-left  o365-ml-10") {
                     node("form-group") {
                         labelNode("col-md-12") {
-                            node {
+                            rentionHoldUI = node {
                                 componetId = "RETENTION_HOLD_ENABLED"
                                 emberComponent = EmberComponent.CHECK_BOX
                             }
@@ -64,7 +70,8 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-group o365-make-relative o365-ml-15") {
+                    duration = node("form-group o365-make-relative o365-ml-15") {
+                        disabled()
                         labelNode("col-md-3 control-label text-right") {
                             label = "retention_hold_duration"
                         }
@@ -75,7 +82,9 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-group o365-mb-20 o365-make-relative o365-ml-15") {
+
+                    comment = node("form-group o365-mb-20 o365-make-relative o365-ml-15") {
+                        disabled()
                         labelNode("col-md-3 control-label") {
                             label = "retention_comment"
                             labelWrapper = "<div class=\"o365-align-right\">%s</div>"
@@ -91,5 +100,8 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(rentionHoldUI,comment,Action.DISABLE,Condition.EQUAL,"\$false")
+        addRule(rentionHoldUI,duration,Action.DISABLE,Condition.EQUAL,"\$false")
+    })
 }

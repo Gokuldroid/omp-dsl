@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -8,15 +10,23 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    var litigationHoldUI: Node? = null
+    var litigationHoldOptions: Node? = null
+    var notesCheck: Node? = null
+    var notes: Node? = null
+    var urlCheck: Node? = null
+    var url: Node? = null
+
     Node("LITIGATION_HOLD_CHANGES") {
         styleClass = "gsection"
         node("gspan_2_of_4 gcolumn line line-right o365-mb-15") {
             node("o365-ml-40 o365-mb-15") {
                 node("checkbox-inline") {
                     htmlTag = "label"
-                    node {
+                    litigationHoldUI = node {
                         componetId = "LITIGATION_HOLD_SETTINGS_UI"
                         emberComponent = EmberComponent.CHECK_BOX
+                        value = "\$true"
                     }
                     node("o365-space-1") {
                         htmlTag = "span"
@@ -28,7 +38,7 @@ fun main(args: Array<String>) {
                 }
             }
             node("o365-ml-60 o365-pr-20") {
-                node("form-horizontal align-right o365-make-relative") {
+                litigationHoldOptions = node("form-horizontal align-right o365-make-relative") {
                     node("form-group") {
                         node {
                             styleClass = "col-md-4 control-label o365-pt-0"
@@ -40,6 +50,7 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "LITIGATION_HOLD_ENABLED"
+                                value = "\$true"
                             }
                         }
                     }
@@ -54,6 +65,7 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "LITIGATION_HOLD_OWNER"
+                                label = "put_on_hold_by"
                             }
                         }
                     }
@@ -61,14 +73,15 @@ fun main(args: Array<String>) {
                         styleClass = "form-group o365-make-relative o365-mb-5"
                         node {
                             styleClass = "col-md-4 control-label o365-pt-0"
-                            label = "hold_duration"
+                            label = "litigation_hold_duration"
                             htmlTag = "label"
                         }
                         node {
                             styleClass = "col-md-7 o365-valign-top"
-                            node ("input-md o365-mxw-50"){
+                            node("input-md o365-mxw-50") {
                                 emberComponent = EmberComponent.TEXT
                                 componetId = "LITIGATION_HOLD_DURATION"
+                                tooltip = "litigation_hold_duration"
                             }
                         }
                     }
@@ -92,14 +105,15 @@ fun main(args: Array<String>) {
                             node("o365-space-2") {
                                 htmlTag = "span"
                             }
-                            node {
+                            notesCheck = node {
                                 emberComponent = EmberComponent.CHECK_BOX
                                 componetId = "RETENTION_COMMENT_UI"
+                                value = "\$true"
                             }
                             node("o365-space-2") {
                                 htmlTag = "span"
                             }
-                            node{
+                            node {
                                 htmlTag = "span"
                                 label = "notes"
                             }
@@ -110,7 +124,7 @@ fun main(args: Array<String>) {
                     }
                     node {
                         styleClass = "form-column o365-valign-top"
-                        node("form-control notestextarea retention-comment"){
+                        notes = node("form-control notestextarea retention-comment") {
                             emberComponent = EmberComponent.TEXT
                             componetId = "RETENTION_COMMENT"
                         }
@@ -129,9 +143,10 @@ fun main(args: Array<String>) {
                             node("o365-space-2") {
                                 htmlTag = "span"
                             }
-                            node {
+                            urlCheck = node {
                                 emberComponent = EmberComponent.CHECK_BOX
                                 componetId = "RETENTION_URL_UI"
+                                value = "\$true"
                             }
                             node("o365-space-2") {
                                 htmlTag = "span"
@@ -147,7 +162,7 @@ fun main(args: Array<String>) {
                     }
                     node {
                         styleClass = "form-column o365-valign-top"
-                        node ("form-control"){
+                        url = node("form-control") {
                             emberComponent = EmberComponent.TEXT
                             componetId = "RETENTION_URL"
                         }
@@ -155,5 +170,9 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(litigationHoldUI!!, litigationHoldOptions!!, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(notesCheck!!, notes!!, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(urlCheck!!, url!!, Action.DISABLE, Condition.EQUAL, "\$false")
+    })
 }

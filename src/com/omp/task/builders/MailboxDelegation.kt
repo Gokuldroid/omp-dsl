@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -7,18 +9,31 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
+    var modifySendAs: Node? = null
+    var sendAsOption: Node? = null
+    var sendAsMembers: Node? = null
+
+    var modifySendOnBefhalf: Node? = null
+    var sendOnBehalfOption: Node? = null
+    var sendOnBehalfMembers: Node? = null
+
+    var modifyFullAccess: Node? = null
+    var fullAccessOption: Node? = null
+    var fullAccessMembers: Node? = null
+
     Node("MAILBOX_DELEGATION") {
         styleClass = "row"
-        node ("col-md-6"){
-            node ("line line-right o365-ml-m40 o365-pr-20"){
-                node ("form-horizontal  o365-ml-40 o365-pl-30 align-left"){
+        node("col-md-6") {
+            node("line line-right o365-ml-m40 o365-pr-20") {
+                node("form-horizontal  o365-ml-40 o365-pl-30 align-left") {
                     //send as
-                    node ("form-group o365-mb-5 o365-make-relative"){
-                        labelNode ("col-md-4 control-label o365-pt-0"){
-                            spanNode ("o365-nowrap"){
-                                node {
+                    node("form-group o365-mb-5 o365-make-relative") {
+                        labelNode("col-md-4 control-label o365-pt-0") {
+                            spanNode("o365-nowrap") {
+                                modifySendAs = node {
                                     emberComponent = EmberComponent.CHECK_BOX
                                     componetId = "MODIFY_SEND_AS_UI"
+                                    value = "\$false"
                                 }
                                 spanNode("o365-space-2")
                                 spanNode {
@@ -26,29 +41,33 @@ fun main(args: Array<String>) {
                                 }
                             }
                         }
-                        node("col-md-7 o365-valign-top o365-make-relative") {
+                        sendAsOption = node("col-md-7 o365-valign-top o365-make-relative") {
+                            disabled()
                             node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "ADD_REMOVE_SEND_AS_PERMISSIONS"
+                                value = "AddPermissions"
                             }
                         }
                     }
                     node("form-group o365-make-relative") {
-
-                        node("col-md-7 col-md-offset-4 o365-valign-top") {
+                        sendAsMembers = node("col-md-7 col-md-offset-4 o365-valign-top") {
+                            disabled()
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "SEND_AS_MEMBERS"
+                                mandatory()
                             }
                         }
                     }
                     //send on behalf
-                    node ("form-group o365-mb-5 o365-make-relative"){
-                        labelNode ("col-md-4 control-label o365-pt-0"){
-                            spanNode ("o365-nowrap"){
-                                node {
+                    node("form-group o365-mb-5 o365-make-relative") {
+                        labelNode("col-md-4 control-label o365-pt-0") {
+                            spanNode("o365-nowrap") {
+                                modifySendOnBefhalf = node {
                                     emberComponent = EmberComponent.CHECK_BOX
                                     componetId = "MODIFY_SEND_ON_BEHALF_UI"
+                                    value = "\$false"
                                 }
                                 spanNode("o365-space-2")
                                 spanNode {
@@ -56,19 +75,23 @@ fun main(args: Array<String>) {
                                 }
                             }
                         }
-                        node("col-md-7 o365-valign-top o365-make-relative") {
+                        sendOnBehalfOption = node("col-md-7 o365-valign-top o365-make-relative") {
+                            disabled()
                             node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "ADD_REMOVE_SEND_ON_BEHALF_PERMISSIONS"
+                                value = "AddPermissions"
                             }
                         }
                     }
                     node("form-group o365-make-relative") {
 
-                        node("col-md-7 col-md-offset-4 o365-valign-top") {
+                        sendOnBehalfMembers = node("col-md-7 col-md-offset-4 o365-valign-top") {
+                            disabled()
                             node {
-                                emberComponent = EmberComponent.REP_POPUP
-                                componetId = "SEND_ON_BEHALF_MEMBERS"
+                                 emberComponent = EmberComponent.REP_POPUP
+                                 componetId = "SEND_ON_BEHALF_MEMBERS"
+                                 mandatory()
                             }
                         }
                     }
@@ -76,15 +99,16 @@ fun main(args: Array<String>) {
             }
         }
         node("col-md-6") {
-            node ("line line-right o365-ml-m40 o365-pr-20"){
-                node ("form-horizontal  o365-ml-40 o365-pl-30 align-left"){
+            node("line line-right o365-ml-m40 o365-pr-20") {
+                node("form-horizontal  o365-ml-40 o365-pl-30 align-left") {
                     //full access
-                    node ("form-group o365-mb-5 o365-make-relative"){
-                        labelNode ("col-md-4 control-label o365-pt-0"){
-                            spanNode ("o365-nowrap"){
-                                node {
+                    node("form-group o365-mb-5 o365-make-relative") {
+                        labelNode("col-md-4 control-label o365-pt-0") {
+                            spanNode("o365-nowrap") {
+                                modifyFullAccess = node {
                                     emberComponent = EmberComponent.CHECK_BOX
                                     componetId = "MODIFY_FULL_ACCESS_UI"
+                                    value = "\$false"
                                 }
                                 spanNode("o365-space-2")
                                 spanNode {
@@ -92,24 +116,35 @@ fun main(args: Array<String>) {
                                 }
                             }
                         }
-                        node("col-md-7 o365-valign-top o365-make-relative") {
+                        fullAccessOption = node("col-md-7 o365-valign-top o365-make-relative") {
+                            disabled()
                             node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "ADD_REMOVE_FULL_ACCESS_PERMISSIONS"
+                                value = "AddPermissions"
                             }
                         }
                     }
                     node("form-group o365-make-relative") {
-
-                        node("col-md-7 col-md-offset-4 o365-valign-top") {
+                        fullAccessMembers = node("col-md-7 col-md-offset-4 o365-valign-top") {
+                            disabled()
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "FULL_ACCESS_MEMBERS"
+                                mandatory()
                             }
                         }
                     }
                 }
             }
         }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(modifySendAs, sendAsOption, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(modifySendOnBefhalf, sendOnBehalfOption, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(modifyFullAccess, fullAccessOption, Action.DISABLE, Condition.EQUAL, "\$false")
+
+        addRule(modifySendAs, sendAsMembers, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(modifySendOnBefhalf, sendOnBehalfMembers, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(modifyFullAccess, fullAccessMembers, Action.DISABLE, Condition.EQUAL, "\$false")
+    })
 }

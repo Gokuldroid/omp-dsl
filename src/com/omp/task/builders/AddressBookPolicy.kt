@@ -33,6 +33,8 @@ fun main(args: Array<String>) {
                                 node {
                                     componetId = "ADDRESS_BOOK_POLICY"
                                     emberComponent = EmberComponent.REP_POPUP
+                                    mandatory()
+                                    label = "address_book_policy"
                                 }
                             }
                         }

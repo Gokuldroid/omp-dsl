@@ -28,13 +28,14 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "ADD_REMOVE_ROLES"
                                 emberComponent = EmberComponent.RADIO_GROUP
+                                value = "AddRoles"
                             }
                         }
                     }
                     node {
                         styleClass = "from-group"
                         node {
-                            label = "exchange_role"
+                            label = "exchange_roles"
                             styleClass = "col-md-4 control-label"
                         }
                         node {
@@ -44,6 +45,7 @@ fun main(args: Array<String>) {
                                 node {
                                     componetId = "EXCHANGE_ROLES"
                                     emberComponent = EmberComponent.REP_POPUP
+                                    mandatory()
                                 }
                             }
                         }

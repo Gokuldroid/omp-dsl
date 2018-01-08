@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -8,6 +10,17 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    var auditUI: Node? = null
+    var audit: Node? = null
+    var ageUI: Node? = null
+    var age: Node? = null
+    var delegateUI: Node? = null
+    var delegate: Node? = null
+    var ownersUI: Node? = null
+    var owners: Node? = null
+    var adminsUI: Node? = null
+    var admins: Node? = null
+
     Node("MAILBOX_AUDIT_SETTINGS") {
         styleClass = "row"
         node("col-md-6") {
@@ -16,7 +29,7 @@ fun main(args: Array<String>) {
                     node("form-group") {
                         labelNode("col-md-4 control-label o365-pt-0") {
                             spanNode("o365-nowrap") {
-                                node {
+                                auditUI = node {
                                     componetId = "MODIFY_AUDIT_ENABLED"
                                     emberComponent = EmberComponent.CHECK_BOX
                                 }
@@ -26,17 +39,19 @@ fun main(args: Array<String>) {
                                 }
                             }
                         }
-                        node("col-md-7 o365-valign-top o365-make-relative") {
+                        audit = node("col-md-7 o365-valign-top o365-make-relative") {
+                            disabled()
                             node {
                                 componetId = "AUDIT_ENABLED"
                                 emberComponent = EmberComponent.RADIO_GROUP
+                                value = "\$true"
                             }
                         }
                     }
                     node("form-group o365-make-relative") {
                         labelNode("col-md-4 control-label o365-pt-0") {
                             spanNode("o365-nowrap") {
-                                node {
+                                ageUI = node {
                                     componetId = "MODIFY_AUDIT_LOG_AGE_LIMIT"
                                     emberComponent = EmberComponent.CHECK_BOX
                                 }
@@ -46,7 +61,8 @@ fun main(args: Array<String>) {
                                 }
                             }
                         }
-                        node("col-md-7 o365-valign-top o365-make-relative") {
+                        age = node("col-md-7 o365-valign-top o365-make-relative") {
+                            disabled()
                             node {
                                 componetId = "AUDIT_LOG_AGE_LIMIT"
                                 styleClass = "input-md o365-mxw-50"
@@ -67,7 +83,7 @@ fun main(args: Array<String>) {
                 node("form-row") {
                     labelNode("form-column o365-pt-5 control-label") {
                         spanNode("o365-nowrap") {
-                            node {
+                            delegateUI = node {
                                 componetId = "MODIFY_AUDIT_DELEGATE"
                                 emberComponent = EmberComponent.CHECK_BOX
                             }
@@ -77,8 +93,9 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-column o365-valign-top o365-make-relative") {
-                        node{
+                    delegate = node("form-column o365-valign-top o365-make-relative") {
+                        disabled()
+                        node {
                             componetId = "AUDIT_DELEGATE"
                             emberComponent = EmberComponent.DR_SELECT_MUL
                         }
@@ -87,7 +104,7 @@ fun main(args: Array<String>) {
                 node("form-row") {
                     labelNode("form-column o365-pt-5 control-label") {
                         spanNode("o365-nowrap") {
-                            node {
+                            ownersUI = node {
                                 componetId = "MODIFY_AUDIT_OWNER"
                                 emberComponent = EmberComponent.CHECK_BOX
                             }
@@ -97,8 +114,9 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-column o365-valign-top o365-make-relative") {
-                        node{
+                    owners = node("form-column o365-valign-top o365-make-relative") {
+                        disabled()
+                        node {
                             componetId = "AUDIT_OWNER"
                             emberComponent = EmberComponent.DR_SELECT_MUL
                         }
@@ -107,7 +125,7 @@ fun main(args: Array<String>) {
                 node("form-row o365-mb-20") {
                     labelNode("form-column o365-pt-5 control-label") {
                         spanNode("o365-nowrap") {
-                            node {
+                            adminsUI = node {
                                 componetId = "MODIFY_AUDIT_ADMIN"
                                 emberComponent = EmberComponent.CHECK_BOX
                             }
@@ -117,8 +135,9 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-column o365-valign-top o365-make-relative") {
-                        node{
+                    admins = node("form-column o365-valign-top o365-make-relative") {
+                        disabled()
+                        node {
                             componetId = "AUDIT_ADMIN"
                             emberComponent = EmberComponent.DR_SELECT_MUL
                         }
@@ -126,5 +145,11 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(auditUI!!, audit, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(ageUI!!, age, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(delegateUI, delegate, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(ownersUI, owners, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(adminsUI, admins, Action.DISABLE, Condition.EQUAL, "\$false")
+    })
 }

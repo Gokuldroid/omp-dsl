@@ -33,6 +33,7 @@ fun main(args: Array<String>) {
                                 node {
                                     componetId = "MANAGER"
                                     emberComponent = EmberComponent.REP_POPUP
+                                    mandatory()
                                 }
                             }
                         }

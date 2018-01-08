@@ -108,17 +108,17 @@ class Node {
     }
 
     fun disabled() {
-        enabled = true
+        enabled = false
     }
 
-    fun addRule(trigger: Node, target: Node, action: Action, condition: Condition, value: String) {
+    fun addRule(trigger: Node?, target: Node?, action: Action, condition: Condition, value: String) {
         val sb = StringBuilder("<O365LayoutComponentRules ")
         ruleId = ruleId.inc()
         with(sb) {
             addParam("UNIQUE_ID", "O365LayoutComponentRules:UNIQUE_ID:" + taskId + "_" + ruleId)
             addParam("TASK_ID", "O365MgmtTasks:TASK_ID:" + taskId)
-            addParam("TRIGGER_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + trigger.id!!)
-            addParam("TARGET_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + target.id!!)
+            addParam("TRIGGER_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + trigger!!.id!!)
+            addParam("TARGET_COMPONENT_GROUP_ID", "O365LayoutComponentGroup:COMPONENT_GROUP_ID:" + taskId + "_" + target!!.id!!)
             addParam("ACTION", action)
             addParam("VALUE", value)
             addParam("CONDITION", condition)

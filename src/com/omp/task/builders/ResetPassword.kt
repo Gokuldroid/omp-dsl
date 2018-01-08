@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -7,6 +9,14 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
+    var random:Node? = null
+    var password:Node? = null
+
+    var radioGrp1:Node? =null
+    var radioGrp2:Node? =null
+
+    var restPass:Node? = null
+
     Node("RESET_PASSWORD") {
         styleClass = "row o365-mb-5"
         node("col-md-6") {
@@ -14,7 +24,7 @@ fun main(args: Array<String>) {
                 node("form-horizontal align-left o365-ml-40 o365-pb-10") {
                     node("form-group") {
                         labelNode("col-md-12 control-label o365-thin-bold") {
-                            node {
+                            restPass = node {
                                 componetId = "RESET_PASSWORD_UI"
                                 emberComponent = EmberComponent.CHECK_BOX
                                 value = "true"
@@ -25,13 +35,13 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-group default_mailbox o365-make-relative") {
+                    radioGrp1 = node("form-group default_mailbox o365-make-relative") {
                         tableNode {
                             tbodyNode {
                                 trNode {
                                     tdNode("width-45") {}
                                     tdNode {
-                                        node {
+                                        random = node {
                                             componetId = "RANDOM_PASSWORD"
                                             emberComponent = EmberComponent.RADIO_GROUP
                                             value = "RandomPassword"
@@ -41,7 +51,7 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-group o365-make-relative o365-mb-0") {
+                    radioGrp2 =node("form-group o365-make-relative o365-mb-0") {
                         tableNode {
                             tbodyNode {
                                 trNode {
@@ -50,6 +60,13 @@ fun main(args: Array<String>) {
                                         node {
                                             componetId = "CUSTOM_PASSWORD"
                                             emberComponent = EmberComponent.RADIO_GROUP
+                                        }
+                                    }
+                                    password = tdNode {
+                                        hide()
+                                         node("input-md o365-ml-40") {
+                                            componetId = "NEW_PASSWORD"
+                                            emberComponent = EmberComponent.TEXT
                                         }
                                     }
                                 }
@@ -74,7 +91,7 @@ fun main(args: Array<String>) {
                         tbodyNode {
                             trNode {
                                 tdNode("width-260") {
-                                    label = "change_password_on_nxt_logon"
+                                    label = "change_password_on_next_logon"
                                 }
                                 tdNode("width-15") { }
                                 tdNode {
@@ -111,5 +128,9 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(random,password,Action.HIDE,Condition.EQUAL,"RandomPassword")
+        addRule(restPass,radioGrp1,Action.DISABLE,Condition.EQUAL,"\$false")
+        addRule(restPass,radioGrp2,Action.DISABLE,Condition.EQUAL,"\$false")
+    })
 }

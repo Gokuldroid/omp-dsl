@@ -16,7 +16,8 @@ enum class EmberComponent(val componentName: String, val handler: String) {
     DATE_PICKER("management.input.date-picker","DatePickerComponent"),
     CUSTOM_ATTRIBUTES("management.input.custom-attributes", "SingleLineComponent"),
     SIZE("management.input.size-input","SingleLineComponent"),
-    RT_EDITOR("management.input.rt-editor","SingleLineComponent")
+    RT_EDITOR("management.input.rt-editor","SingleLineComponent"),
+    ADD_REMOVE_PERMISSIONS("management.input.add-remove-permissions","ReportPopupComponent")
 }
 
 class AbsTractComponent() {

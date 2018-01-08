@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -8,6 +10,8 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    var mailtipEnabled: Node? = null
+    var mailtip: Node? = null
     Node("MAILTIP_SETTINGS") {
         styleClass = "row"
         node("col-md-12") {
@@ -18,22 +22,29 @@ fun main(args: Array<String>) {
                             label = "set_remove_mailtip"
                         }
                         node("col-md-7 o365-valign-top") {
-                            node {
+                            mailtipEnabled = node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "IS_MAILTIP_ENABLED"
+                                value = "\$true"
                             }
                         }
                     }
                     node("form-group") {
                         node("col-md-7 col-md-offset-4 o365-valign-top") {
-                            node {
+                            mailtip = node {
+                                styleClass = "mailtip"
                                 emberComponent = EmberComponent.TEXT
                                 componetId = "MAILTIP"
+                                tooltip = "mailtip"
+                                placeHolderText = "mailtip_placeholder"
+                                mandatory()
                             }
                         }
                     }
                 }
             }
         }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(mailtipEnabled,mailtip,Action.DISABLE,Condition.EQUAL,"\$false")
+    })
 }
