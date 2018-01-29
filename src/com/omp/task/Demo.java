@@ -101,13 +101,5 @@ public class Demo
 
 	public static void main(String[] args) throws Exception
 	{
-		System.out.println(ONE_1);
-		System.out.println(ONE_2);
-		System.out.println(ONE_3);
-		System.out.println(ONE_4);
-		System.out.println(ONE_5);
-		System.out.println(ONE_6);
-		System.out.println(ONE_7);
-		System.out.println(ONE_8);
 	}
 }

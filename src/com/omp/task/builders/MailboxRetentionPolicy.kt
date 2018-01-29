@@ -47,7 +47,7 @@ fun main(args: Array<String>) {
                     }
                     node("col-md-7 o365-valign-top") {
                         node {
-                            styleClass = "input-md o365-mxw-50"
+                            styleClass = "input-md o365-mxw-60"
                             emberComponent = EmberComponent.TEXT
                             componetId = "RETAIN_DELETED_ITEMS_FOR"
                         }

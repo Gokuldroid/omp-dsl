@@ -30,8 +30,8 @@ fun main(args: Array<String>) {
                         }
                     }
                     node("form-group") {
-                        node("col-md-7 col-md-offset-4 o365-valign-top") {
-                            mailtip = node {
+                        mailtip = node("col-md-7 col-md-offset-4 o365-valign-top") {
+                            node {
                                 styleClass = "mailtip"
                                 emberComponent = EmberComponent.TEXT
                                 componetId = "MAILTIP"
@@ -45,6 +45,6 @@ fun main(args: Array<String>) {
             }
         }
     }.copyToClipBoard({
-        addRule(mailtipEnabled,mailtip,Action.DISABLE,Condition.EQUAL,"\$false")
+        addRule(mailtipEnabled, mailtip, Action.HIDE, Condition.EQUAL, "\$false")
     })
 }

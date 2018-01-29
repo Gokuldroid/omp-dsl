@@ -70,7 +70,7 @@ fun main(args: Array<String>) {
                         }
                     }
                     node {
-                        styleClass = "form-group o365-make-relative o365-mb-5"
+                        styleClass = "form-group o365-make-relatiFve o365-mb-5"
                         node {
                             styleClass = "col-md-4 control-label o365-pt-0"
                             label = "litigation_hold_duration"
@@ -78,7 +78,7 @@ fun main(args: Array<String>) {
                         }
                         node {
                             styleClass = "col-md-7 o365-valign-top"
-                            node("input-md o365-mxw-50") {
+                            node("input-md o365-mxw-60") {
                                 emberComponent = EmberComponent.TEXT
                                 componetId = "LITIGATION_HOLD_DURATION"
                                 tooltip = "litigation_hold_duration"

@@ -1,5 +1,7 @@
 package com.omp.task.builders
 
+import com.omp.task.layout.Action
+import com.omp.task.layout.Condition
 import com.omp.task.layout.EmberComponent
 import com.omp.task.layout.Node
 
@@ -7,6 +9,10 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
+    var enabled: Node? = null
+    var options1: Node? = null
+    var options2: Node? = null
+
     Node("MFA_SETTINGS") {
         styleClass = "row"
         node("col-md-12") {
@@ -19,7 +25,7 @@ fun main(args: Array<String>) {
                             label = "mfa_settings"
                         }
                         node("col-md-7 o365-valign-top") {
-                            node {
+                            enabled = node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "IS_MFA_ENABLED"
                                 value = "Enforce"
@@ -27,7 +33,7 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-group o365-make-relative") {
+                    options1 = node("form-group o365-make-relative") {
                         node("col-md-4 control-label") {
                             htmlTag = "label"
                             label = "select_mfa_method"
@@ -43,7 +49,7 @@ fun main(args: Array<String>) {
                         }
                     }
 
-                    node("form-group o365-make-relative") {
+                    options2 = node("form-group o365-make-relative") {
                         node("col-md-4 control-label") {
                             htmlTag = "label"
                             label = "default_mfa_method"
@@ -119,5 +125,8 @@ fun main(args: Array<String>) {
 //                }
 //            }
 //        }
-    }.copyToClipBoard()
+    }.copyToClipBoard({
+        addRule(enabled,options1,Action.HIDE,Condition.EQUAL,"Disabled")
+        addRule(enabled,options2,Action.HIDE,Condition.EQUAL,"Disabled")
+    })
 }

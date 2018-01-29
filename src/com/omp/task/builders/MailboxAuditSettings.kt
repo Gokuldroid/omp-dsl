@@ -22,9 +22,9 @@ fun main(args: Array<String>) {
     var admins: Node? = null
 
     Node("MAILBOX_AUDIT_SETTINGS") {
-        styleClass = "row"
+        styleClass = "row o365-mb-10"
         node("col-md-6") {
-            node("line line-right o365-ml-m40 o365-pr-20 o365-mt-10") {
+            node("o365-ml-m40 o365-pr-20 o365-mt-10") {
                 node("form-horizontal  o365-ml-40 o365-pl-30 align-left") {
                     node("form-group") {
                         labelNode("col-md-4 control-label o365-pt-0") {
@@ -65,7 +65,7 @@ fun main(args: Array<String>) {
                             disabled()
                             node {
                                 componetId = "AUDIT_LOG_AGE_LIMIT"
-                                styleClass = "input-md o365-mxw-50"
+                                styleClass = "input-md o365-mxw-60"
                                 emberComponent = EmberComponent.TEXT
                             }
                         }
@@ -73,7 +73,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-        node("col-md-6") {
+        node("col-md-6 line line-left") {
             node("form-layout o365-ml-10") {
                 node("form-row") {
                     labelNode("form-column o365-thin-bold") {
@@ -98,6 +98,7 @@ fun main(args: Array<String>) {
                         node {
                             componetId = "AUDIT_DELEGATE"
                             emberComponent = EmberComponent.DR_SELECT_MUL
+                            placeHolderText = "select_actions"
                         }
                     }
                 }
@@ -119,6 +120,7 @@ fun main(args: Array<String>) {
                         node {
                             componetId = "AUDIT_OWNER"
                             emberComponent = EmberComponent.DR_SELECT_MUL
+                            placeHolderText = "select_actions"
                         }
                     }
                 }
@@ -140,6 +142,7 @@ fun main(args: Array<String>) {
                         node {
                             componetId = "AUDIT_ADMIN"
                             emberComponent = EmberComponent.DR_SELECT_MUL
+                            placeHolderText = "select_actions"
                         }
                     }
                 }

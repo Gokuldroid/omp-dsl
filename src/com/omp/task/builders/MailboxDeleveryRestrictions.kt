@@ -118,6 +118,8 @@ fun main(args: Array<String>) {
                             acceptMessagesFromUsers = node {
                                 componetId = "ACCEPT_MESSAGES_FROM_USERS"
                                 emberComponent = EmberComponent.REP_POPUP
+                                mandatory()
+                                disabled()
                             }
                         }
                     }
@@ -137,6 +139,8 @@ fun main(args: Array<String>) {
                             rejectMessagesFromUsers = node {
                                 componetId = "REJECT_MESSAGES_FROM_USERS"
                                 emberComponent = EmberComponent.REP_POPUP
+                                mandatory()
+                                disabled()
                             }
                         }
                     }
@@ -150,7 +154,7 @@ fun main(args: Array<String>) {
         addRule(sendLimitOption, sendLimit, Action.DISABLE, Condition.EQUAL, "UseDefaultLimit")
         addRule(receiveLimitOption, receiveLimit, Action.DISABLE, Condition.EQUAL, "UseDefaultLimit")
         addRule(modifyRestrictionsUI, restrictionsGroup, Action.DISABLE, Condition.EQUAL, "\$false")
-        addRule(acceptMessagesFrom, acceptMessagesFromUsers, Action.DISABLE, Condition.NOT_EQUAL, "custom")
-        addRule(rejectMessagesFrom, rejectMessagesFromUsers, Action.DISABLE, Condition.NOT_EQUAL, "custom")
+        addRule(acceptMessagesFrom, acceptMessagesFromUsers, Action.DISABLE, Condition.NOT_EQUAL, "Custom")
+        addRule(rejectMessagesFrom, rejectMessagesFromUsers, Action.DISABLE, Condition.NOT_EQUAL, "Custom")
     })
 }

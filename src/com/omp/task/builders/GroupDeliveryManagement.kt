@@ -75,7 +75,9 @@ fun main(args: Array<String>) {
                             disabled()
                             node {
                                 componetId = "GROUPS_USERS"
+                                label = "select_users"
                                 emberComponent = EmberComponent.REP_POPUP
+                                mandatory()
                             }
                         }
                     }
