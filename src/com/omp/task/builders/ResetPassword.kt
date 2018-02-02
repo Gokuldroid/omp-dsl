@@ -64,7 +64,7 @@ fun main(args: Array<String>) {
                                     }
                                     password = tdNode {
                                         hide()
-                                         node("input-md o365-ml-40") {
+                                         node("input-md o365-ml-40 form-control") {
                                             componetId = "NEW_PASSWORD"
                                             emberComponent = EmberComponent.TEXT
                                         }

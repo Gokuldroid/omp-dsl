@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
         node("col-md-12") {
             node("static-container center-block o365-pl-25") {
                 node("form-horizontal align-right o365-pl-3") {
-                    node("form-group o365-mb-10") {
+                    node("form-group") {
                         labelNode("col-md-4 control-label o365-pt-0") {
                             label = "set_remove_mailtip"
                         }
@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    node("form-group") {
+                    node("form-group o365-mb-20") {
                         mailtip = node("col-md-7 col-md-offset-4 o365-valign-top") {
                             node {
                                 styleClass = "mailtip"

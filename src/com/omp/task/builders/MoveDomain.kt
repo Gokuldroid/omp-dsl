@@ -17,15 +17,14 @@ fun main(args: Array<String>) {
                         label = "select_domain"
                     }
                     node("col-md-9") {
-                        node("col-md-9") {
-                            node("o365-make-inline-block o365-mw-300 pull-left o365-make-relative") {
-                                node{
-                                    componetId = "DOMAIN"
-                                    emberComponent = EmberComponent.DR_SELECT
-                                }
+                        node("o365-make-inline-block o365-mw-300 pull-left o365-make-relative") {
+                            node {
+                                componetId = "DOMAIN"
+                                emberComponent = EmberComponent.DR_SELECT
                             }
                         }
                     }
+
                 }
             }
         }

@@ -16,12 +16,10 @@ fun main(args: Array<String>) {
                         label = "convert_to"
                     }
                     node("col-md-9") {
-                        node("col-md-9") {
-                            node("o365-make-inline-block o365-mw-300 pull-left o365-make-relative") {
-                                node{
-                                    componetId = "MAILBOX_CONVERT_TO_TYPE"
-                                    emberComponent = EmberComponent.DR_SELECT
-                                }
+                        node("o365-make-inline-block o365-mw-300 pull-left o365-make-relative") {
+                            node{
+                                componetId = "MAILBOX_CONVERT_TO_TYPE"
+                                emberComponent = EmberComponent.DR_SELECT
                             }
                         }
                     }

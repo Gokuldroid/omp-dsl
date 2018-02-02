@@ -7,14 +7,17 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
-    val node = Node("ADDRESS_BOOK_POLICY_CHANGES") {
+
+    //other tasks SHARED_MBX_ADDRESS_BOOK_POLICY_CHANGES , ADDRESS_BOOK_POLICY_CHANGES
+
+    val node = Node("SHARED_MBX_ADDRESS_BOOK_POLICY_CHANGES") {
         styleClass = "row"
         node {
             styleClass = "col-md-12"
             node {
                 styleClass = "static-container-sm center-block"
                 node {
-                    styleClass = "form-horizontal align-right"
+                    styleClass = "form-horizontal align-right o365-ml-m22"
                     node {
                         styleClass = "form-group o365-mb-20"
                         node {

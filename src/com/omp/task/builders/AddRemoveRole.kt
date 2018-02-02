@@ -33,7 +33,7 @@ fun main(args: Array<String>) {
                         }
                     }
                     node {
-                        styleClass = "from-group"
+                        styleClass = "form-group"
                         node {
                             label = "exchange_roles"
                             styleClass = "col-md-4 control-label"
@@ -41,12 +41,9 @@ fun main(args: Array<String>) {
                         node {
                             styleClass = "col-md-7 o365-valign-top o365-mb-15"
                             node {
-                                styleClass = "input-group static"
-                                node {
-                                    componetId = "EXCHANGE_ROLES"
-                                    emberComponent = EmberComponent.REP_POPUP
-                                    mandatory()
-                                }
+                                componetId = "EXCHANGE_ROLES"
+                                emberComponent = EmberComponent.REP_POPUP
+                                mandatory()
                             }
                         }
                     }

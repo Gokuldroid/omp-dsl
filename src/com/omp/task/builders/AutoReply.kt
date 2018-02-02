@@ -47,7 +47,6 @@ fun main(args: Array<String>) {
                                     emberComponent = EmberComponent.TAB_LAYOUT
                                     node {
                                         label = "o365.input_fields.inside_org"
-                                        styleClass = "o365-p-5"
                                         node {
                                             styleClass = "o365-mh-100"
                                             node {
@@ -57,7 +56,6 @@ fun main(args: Array<String>) {
                                         }
                                     }
                                     node {
-                                        styleClass = "o365-p-5"
                                         label = "o365.input_fields.outside_org"
                                         labelWrapper = "%s <i class=\"o365-inline-icon icn-tick-green o365-mr-m10\"></i>"
                                         node {

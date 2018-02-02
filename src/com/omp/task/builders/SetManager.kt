@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
             node {
                 styleClass = "static-container-sm center-block"
                 node {
-                    styleClass = "form-horizontal align-right"
+                    styleClass = "form-horizontal align-right o365-ml-m22"
                     node {
                         styleClass = "form-group o365-mb-20"
                         node {
