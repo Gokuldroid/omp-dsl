@@ -12,6 +12,7 @@ import com.omp.task.layout.Node
 fun main(args: Array<String>) {
     var mailtipEnabled: Node? = null
     var mailtip: Node? = null
+    //SHARED_MBX_MAILTIP_SEETINGS
     Node("MAILTIP_SETTINGS") {
         styleClass = "row"
         node("col-md-12") {

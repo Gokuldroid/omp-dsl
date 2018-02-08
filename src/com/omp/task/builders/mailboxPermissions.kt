@@ -10,11 +10,10 @@ import com.omp.task.layout.Node
 fun main(args: Array<String>) {
     Node("MAILBOX_PERMISSION_CHANGES") {
         styleClass = "row"
-        node("col-md-2 text-right") {
-            label = "select_permissions"
-        }
-        node("col-md-8") {
+        node("col-md-12") {
             node {
+                styleClass= "o365-ml-50"
+                label = "select_permissions"
                 componetId = "ADD_REMOVE_PERMISSION_SELECTION"
                 emberComponent = EmberComponent.ADD_REMOVE_PERMISSIONS
                 mandatory()

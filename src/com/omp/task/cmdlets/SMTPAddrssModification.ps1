@@ -1,6 +1,6 @@
 $identity = %identity%;
-$primarysmtpaddress = %primarysmtpaddress%; 
-$proxyaddresses = %proxyaddresses%; 
+$primarysmtpaddress = %primarysmtpaddress%;
+$proxyaddresses = %proxyaddresses%;
 $emails = Get-Mailbox -Identity $identity -ErrorAction stop|select EmailAddresses|%{$_.EmailAddresses}; 
 $primarysmtpaddressold; 
 $othersmtpaddressold=@(); 
@@ -8,25 +8,27 @@ foreach ($email in $emails){
     if($email -clike 'SMTP*'){
         $primarysmtpaddressold = $email -replace 'SMTP:',''; 
     }else{
-        $othersmtpaddressold += $email -replace 'SMTP:',''; 
-    } 
-} 
+        if($appendcsvvalues){
+            $othersmtpaddressold += $email;
+        }
+    }
+}
+
+$othersmtpaddressold;
 if($proxyaddresses -ne $null){
-    $proxyaddresses = $proxyaddresses -split ','|Where-Object {$_.trim() -ne ''}|%{$_.Trim()}; 
-} 
-if($appendcsvvalues){
-    $proxyaddresses += $othersmtpaddressold; 
-} 
+    $proxyaddresses = $proxyaddresses -split ','|Where-Object {$_.trim() -ne ''}|%{'smtp:'+$_.Trim()};
+    $othersmtpaddressold += $proxyaddresses;
+}
 if($primarysmtpaddress -eq $null){
     $primarysmtpaddress = $primarysmtpaddressold; 
 } 
-$cmd = 'Set-Mailbox -Identity '+$identity+' -EmailAddresses ''SMTP:'+$primarysmtpaddress+''''; 
+$cmd = 'Set-Mailbox -Identity '+$identity+' -EmailAddresses SMTP:'+$primarysmtpaddress;
 if($proxyaddresses -ne $null){ 
-    $proxyaddresses = $proxyaddresses |Select -Unique;
-    foreach($proxyaddress in $proxyaddresses){
-        if($proxyaddress -ne $primarysmtpaddress){
-            $cmd = $cmd + ',''smtp:'+$proxyaddress+''''; 
+    $proxyaddresses = $othersmtpaddressold |Select -Unique;
+    foreach($proxyaddress in $othersmtpaddressold){
+        if($proxyaddress -ne ('smtp:'+$primarysmtpaddress)){
+            $cmd = $cmd + ','+$proxyaddress;
         } 
     } 
-} 
+}
 Invoke-Expression -Command $cmd;

@@ -25,7 +25,6 @@ fun main(args: Array<String>) {
                             htmlTag = "label"
                             styleClass = "col-md-4 control-label"
                             label = "assign_remove_licenses"
-                            label = ""
                         }
                         node {
                             styleClass = "col-md-8"
@@ -65,5 +64,7 @@ fun main(args: Array<String>) {
         }
     }.copyToClipBoard({
         addRule(nodeselect!!, licenseses!!, Action.HIDE, Condition.EQUAL, "remove-all")
+        addRule(nodeselect!!,licenseses!!,Action.VIEW_LICENSE_OPTIONS,Condition.NOT_EQUAL,"remove-selected")
+        addRule(nodeselect!!,licenseses!!,Action.VIEW_ASSIGN_LICENSE,Condition.EQUAL,"assign")
     })
 }

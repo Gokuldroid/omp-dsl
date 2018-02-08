@@ -8,12 +8,13 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
+    //SHARED_MAILBOX_FEATURES_SETTINGS
     val root = Node("MAILBOX_FEATURES_SETTINGS") {
         styleClass = "row o365-mb-5"
         node {
             styleClass = "col-md-6"
             node {
-                styleClass = "form-horizontal align-right line line-right"
+                styleClass = "form-horizontal align-right line line-right o365-ml-40"
 
                 node{
                     styleClass = "form-group"
@@ -88,7 +89,7 @@ fun main(args: Array<String>) {
         node {
             styleClass = "col-md-6"
             node {
-                styleClass = "form-horizontal align-right  o365-ml-m40"
+                styleClass = "form-horizontal align-right"
 
                 node{
                     styleClass = "form-group"

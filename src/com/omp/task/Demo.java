@@ -14,26 +14,7 @@ public class Demo
 {
 	public static void main(String[] args) throws Exception
 	{
-		Class<?> extHDTDBCustomValueHandlerClass = Class.forName("com.omp.task.Demo");
-		Class<?>[] argTypes = new Class[]{JSONObject.class};
-		Method extDBCustomValueHandlerMethod = extHDTDBCustomValueHandlerClass.getMethod("demoApp", argTypes);// No I18N
-
-
-		JSONObject jsonObject = new JSONObject();
-		Stopwatch watch = Stopwatch.createStarted();
-		for (int i = 0; i < 10000; i++)
-		{
-			extDBCustomValueHandlerMethod.invoke(null,jsonObject);
-		}
-		System.out.println(watch.elapsed(TimeUnit.MICROSECONDS));
-
-		watch = Stopwatch.createStarted();
-		for (int i = 0; i < 10000; i++)
-		{
-			demoApp(jsonObject);
-		}
-
-		System.out.println(watch.elapsed(TimeUnit.MICROSECONDS));
+		System.out.println("Go'kul".replace("'","\\'"));
 
 	}
 

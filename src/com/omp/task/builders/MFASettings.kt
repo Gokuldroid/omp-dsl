@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
         styleClass = "row"
         node("col-md-12") {
             node("static-container-sm center-block ember-view") {
-                node("form-horizontal align-right") {
+                node("form-horizontal align-right o365-ml-m22") {
                     node("form-group") {
                         node("col-md-4 control-label o365-pt-0") {
                             htmlTag = "label"

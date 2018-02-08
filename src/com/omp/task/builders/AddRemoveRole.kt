@@ -39,7 +39,7 @@ fun main(args: Array<String>) {
                             styleClass = "col-md-4 control-label"
                         }
                         node {
-                            styleClass = "col-md-7 o365-valign-top o365-mb-15"
+                            styleClass = "col-md-7 o365-valign-top"
                             node {
                                 componetId = "EXCHANGE_ROLES"
                                 emberComponent = EmberComponent.REP_POPUP

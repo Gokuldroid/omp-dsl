@@ -124,7 +124,7 @@ fun main(args: Array<String>) {
                     }
                     node {
                         styleClass = "form-column o365-valign-top"
-                        notes = node("form-control notestextarea retention-comment") {
+                        notes = node("form-control notestextarea litigation-hold") {
                             emberComponent = EmberComponent.TEXT
                             componetId = "RETENTION_COMMENT"
                         }

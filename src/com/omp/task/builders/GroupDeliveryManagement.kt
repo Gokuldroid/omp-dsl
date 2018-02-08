@@ -71,7 +71,7 @@ fun main(args: Array<String>) {
                                 label = "restrict_users_groups"
                             }
                         }
-                        restrictUsersEle1 = node("col-md-8 o365-valign-top") {
+                        restrictUsersEle1 = node("col-md-8 o365-valign-top grp-accept-mail-from") {
                             disabled()
                             node {
                                 componetId = "GROUPS_USERS"
