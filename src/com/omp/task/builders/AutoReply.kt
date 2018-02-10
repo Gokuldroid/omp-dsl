@@ -10,6 +10,11 @@ import com.omp.task.layout.Node
  */
 fun main(args: Array<String>) {
 
+   doOperationsForAutoReply("MAILBOX_AUTO_REPLY_CONFIGURATION")
+    doOperationsForAutoReply("SHARED_MBX_AUTO_REPLY_CONFIGURATION")
+}
+
+fun doOperationsForAutoReply(taskId:String){
     var autoReplyOption: Node? = null
     var enableAutoReplyOutside: Node? = null
     var outsideMsg: Node? = null
@@ -19,7 +24,7 @@ fun main(args: Array<String>) {
     var sendAutoReply: Node? = null
     var autoReplyDuration: Node? = null
 
-    val root = Node("MAILBOX_AUTO_REPLY_CONFIGURATION") {
+    val root = Node(taskId) {
         styleClass = "row o365-mb-5"
         node {
             styleClass = "col-md-12"
@@ -100,26 +105,24 @@ fun main(args: Array<String>) {
                                 }
                             }
                         }
-                        node("form-group sendAutoReply o365-mb-15 o365-make-relative o365-ml-5") {
-                            node("form-group o365-mb-15 o365-make-relative o365-mt-20") {
-                                labelNode("checkbox-inline o365-ml-15") {
-                                    sendAutoReply = node {
-                                        componetId = "SCHEDULE_AUTO_REPLY"
-                                        emberComponent = EmberComponent.CHECK_BOX
-                                        value = "\$false"
-                                    }
-                                    spanNode("o365-space-2")
-                                    spanNode {
-                                        labelWrapper = "%s<span class=\"o365-space-1\"></span>"
-                                        label = "send_reply_period"
-                                    }
+                        node("form-group o365-mb-15 o365-make-relative o365-mt-20") {
+                            labelNode("checkbox-inline o365-ml-15") {
+                                sendAutoReply = node {
+                                    componetId = "SCHEDULE_AUTO_REPLY"
+                                    emberComponent = EmberComponent.CHECK_BOX
+                                    value = "\$false"
                                 }
-                                autoReplyDuration = node("o365-inline-block o365-valign-middle o365-make-relative") {
-                                    disabled()
-                                    node {
-                                        componetId = "AUTO_REPLY_DURATION"
-                                        emberComponent = EmberComponent.DATE_PICKER
-                                    }
+                                spanNode("o365-space-1")
+                                spanNode {
+                                    labelWrapper = "%s<span class=\"o365-space-1\"></span>"
+                                    label = "send_reply_period"
+                                }
+                            }
+                            autoReplyDuration = node("o365-inline-block o365-valign-middle o365-make-relative") {
+                                disabled()
+                                node {
+                                    componetId = "AUTO_REPLY_DURATION"
+                                    emberComponent = EmberComponent.DATE_PICKER
                                 }
                             }
                         }
@@ -128,7 +131,7 @@ fun main(args: Array<String>) {
             }
         }
     }
-    root.copyToClipBoard({
+    root.replaceTasksXml({
         addRule(autoReplyOption, container1, Action.HIDE, Condition.EQUAL, "\$false")
         addRule(enableAutoReplyOutside, outsideMsg, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(sendAutoReply, autoReplyDuration, Action.DISABLE, Condition.EQUAL, "\$false")

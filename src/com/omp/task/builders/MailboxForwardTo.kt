@@ -9,21 +9,26 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
-    var dontFwd:Node ? = null
-    var keepACopy:Node?= null
+    doChangesForwardTo("MAILBOX_FORWARD_TO")
+    doChangesForwardTo("SHARED_MBX_FORWARD_TO")
+}
+
+fun doChangesForwardTo(taskId: String) {
+    var dontFwd: Node? = null
+    var keepACopy: Node? = null
     var internalFwd: Node? = null
     var internalFwdAddress: Node? = null
     var externalFwd: Node? = null
     var externalFwDdAddress: Node? = null
 
-    Node("MAILBOX_FORWARD_TO") {
+    Node(taskId) {
         styleClass = "row o365-mb-5"
         node("col-md-6") {
             node("o365-ml-30 o365-pr-30") {
                 node("form-horizontal align-left") {
                     node("form-group") {
                         node("col-md-12") {
-                            labelNode("radio-inline") {
+                            labelNode {
                                 dontFwd = node {
                                     componetId = "MAILBOX_FWD_TO_DISABLED"
                                     emberComponent = EmberComponent.RADIO_GROUP
@@ -38,7 +43,7 @@ fun main(args: Array<String>) {
                                 tbodyNode {
                                     trNode {
                                         tdNode {
-                                            labelNode("radio-inline o365-ml-15 width-220") {
+                                            labelNode(" o365-ml-15 width-220") {
                                                 internalFwd = node {
                                                     componetId = "MAILBOX_FWD_TO_INTERNAL"
                                                     emberComponent = EmberComponent.RADIO_GROUP
@@ -49,6 +54,7 @@ fun main(args: Array<String>) {
                                             internalFwdAddress = node("o365-w-260") {
                                                 componetId = "MAILBOX_FWD_TO_INTERNAL_ADDRESS"
                                                 emberComponent = EmberComponent.REP_POPUP
+                                                placeHolderText = "choose_address"
                                                 mandatory()
                                                 disabled()
                                             }
@@ -62,7 +68,7 @@ fun main(args: Array<String>) {
                         tableNode {
                             trNode {
                                 tdNode {
-                                    labelNode("radio-inline o365-ml-15 width-220") {
+                                    labelNode(" o365-ml-15 width-220") {
                                         externalFwd = node {
                                             componetId = "MAILBOX_FWD_TO_EXTERNAL"
                                             emberComponent = EmberComponent.RADIO_GROUP
@@ -101,9 +107,9 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
-        addRule(dontFwd,keepACopy,Action.HIDE,Condition.EQUAL,"ForwardDisabled")
-        addRule(internalFwd,internalFwdAddress,Action.DISABLE,Condition.NOT_EQUAL,"ToInternal")
-        addRule(externalFwd,externalFwDdAddress,Action.DISABLE,Condition.NOT_EQUAL,"ToExternal")
+    }.replaceTasksXml({
+        addRule(dontFwd, keepACopy, Action.HIDE, Condition.EQUAL, "ForwardDisabled")
+        addRule(internalFwd, internalFwdAddress, Action.DISABLE, Condition.NOT_EQUAL, "ToInternal")
+        addRule(externalFwd, externalFwDdAddress, Action.DISABLE, Condition.NOT_EQUAL, "ToExternal")
     })
 }

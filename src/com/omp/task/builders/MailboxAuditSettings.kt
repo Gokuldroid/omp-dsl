@@ -10,6 +10,11 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    doOperationsForAuditSettings("MAILBOX_AUDIT_SETTINGS")
+    doOperationsForAuditSettings("SHARED_MBX_AUDIT_SETTINGS")
+}
+
+fun doOperationsForAuditSettings(taskId:String){
     var auditUI: Node? = null
     var audit: Node? = null
     var ageUI: Node? = null
@@ -21,7 +26,7 @@ fun main(args: Array<String>) {
     var adminsUI: Node? = null
     var admins: Node? = null
 
-    Node("MAILBOX_AUDIT_SETTINGS") {
+    Node(taskId) {
         styleClass = "row o365-mb-10"
         node("col-md-6") {
             node("o365-ml-m40 o365-pr-20 o365-mt-10") {
@@ -67,6 +72,7 @@ fun main(args: Array<String>) {
                                 componetId = "AUDIT_LOG_AGE_LIMIT"
                                 styleClass = "input-md o365-mxw-60"
                                 emberComponent = EmberComponent.TEXT
+                                tooltip ="mailbox_audit_age_limit"
                             }
                         }
                     }
@@ -148,7 +154,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(auditUI!!, audit, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(ageUI!!, age, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(delegateUI, delegate, Action.DISABLE, Condition.EQUAL, "\$false")

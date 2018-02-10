@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
                     node {
                         styleClass = "form-group"
                         node {
-                            label = "exchange_roles"
+                            label = "select_roles"
                             styleClass = "col-md-4 control-label"
                         }
                         node {
@@ -50,5 +50,5 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.replaceTasksXml()
 }

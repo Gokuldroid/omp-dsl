@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
                             }
                             spanNode("o365-space-2") {
                                 labelWrapper = "<span class=\"o365-thin-bold\">%s</span>"
-                                label = "Modify Storage Limits"
+                                label = "modify_storage_limits"
                             }
                         }
                     }

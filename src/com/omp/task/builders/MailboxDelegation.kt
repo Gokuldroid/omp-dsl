@@ -9,6 +9,11 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
+    doOperationsForDeligations("MAILBOX_DELEGATION")
+    doOperationsForDeligations("SHARED_MBX_DELEGATION")
+}
+
+fun doOperationsForDeligations(taskId:String){
     var modifySendAs: Node? = null
     var sendAsOption: Node? = null
     var sendAsMembers: Node? = null
@@ -21,7 +26,7 @@ fun main(args: Array<String>) {
     var fullAccessOption: Node? = null
     var fullAccessMembers: Node? = null
 
-    Node("MAILBOX_DELEGATION") {
+    Node(taskId) {
         styleClass = "row"
         node("col-md-6") {
             node("line line-right o365-ml-m40 o365-pr-20") {
@@ -56,6 +61,7 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "SEND_AS_MEMBERS"
+                                placeHolderText = "select_users"
                                 mandatory()
                             }
                         }
@@ -89,9 +95,10 @@ fun main(args: Array<String>) {
                         sendOnBehalfMembers = node("col-md-7 col-md-offset-4 o365-valign-top") {
                             disabled()
                             node {
-                                 emberComponent = EmberComponent.REP_POPUP
-                                 componetId = "SEND_ON_BEHALF_MEMBERS"
-                                 mandatory()
+                                emberComponent = EmberComponent.REP_POPUP
+                                componetId = "SEND_ON_BEHALF_MEMBERS"
+                                placeHolderText = "select_users"
+                                mandatory()
                             }
                         }
                     }
@@ -131,6 +138,7 @@ fun main(args: Array<String>) {
                             node {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "FULL_ACCESS_MEMBERS"
+                                placeHolderText = "select_users"
                                 mandatory()
                             }
                         }
@@ -138,7 +146,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(modifySendAs, sendAsOption, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(modifySendOnBefhalf, sendOnBehalfOption, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(modifyFullAccess, fullAccessOption, Action.DISABLE, Condition.EQUAL, "\$false")

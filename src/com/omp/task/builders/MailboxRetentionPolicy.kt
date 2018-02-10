@@ -10,10 +10,15 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    doOperationsForRetentionPolicy("MAILBOX_RETENTION_POLICY_CHANGES")
+    doOperationsForRetentionPolicy("SHARED_MBX_RETENTION_POLICY_CHANGES")
+}
+
+fun doOperationsForRetentionPolicy(taskId:String){
     var rentionHoldUI: Node? = null
     var duration: Node? = null
     var comment: Node? = null
-    Node("MAILBOX_RETENTION_POLICY_CHANGES") {
+    Node(taskId) {
         styleClass = "row"
         node("col-md-6") {
             node("form-horizontal align-right line line-right o365-ml-20") {
@@ -64,7 +69,7 @@ fun main(args: Array<String>) {
                                 componetId = "RETENTION_HOLD_ENABLED"
                                 emberComponent = EmberComponent.CHECK_BOX
                             }
-                            spanNode("o365-space-2")
+                            spanNode("o365-space-1")
                             spanNode {
                                 label = "enable_retention_hold"
                             }
@@ -100,7 +105,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(rentionHoldUI,comment,Action.DISABLE,Condition.EQUAL,"\$false")
         addRule(rentionHoldUI,duration,Action.DISABLE,Condition.EQUAL,"\$false")
     })

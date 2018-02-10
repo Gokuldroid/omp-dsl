@@ -8,16 +8,22 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
-    Node("MAILBOX_PERMISSION_CHANGES") {
+    doChangesFor("MAILBOX_PERMISSION_CHANGES")
+    doChangesFor("SHARED_MBX_PERMISSION_CHANGES")
+}
+
+
+fun doChangesFor(taskId:String){
+    Node(taskId) {
         styleClass = "row"
         node("col-md-12") {
             node {
                 styleClass= "o365-ml-50"
-                label = "select_permissions"
+                label = "select_users_permissions"
                 componetId = "ADD_REMOVE_PERMISSION_SELECTION"
                 emberComponent = EmberComponent.ADD_REMOVE_PERMISSIONS
                 mandatory()
             }
         }
-    }.copyToClipBoard()
+    }.replaceTasksXml()
 }

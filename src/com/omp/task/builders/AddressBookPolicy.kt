@@ -7,10 +7,12 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
+    doOperationsForAddressBookPolicy("SHARED_MBX_ADDRESS_BOOK_POLICY_CHANGES")
+    doOperationsForAddressBookPolicy("ADDRESS_BOOK_POLICY_CHANGES")
+}
 
-    //other tasks SHARED_MBX_ADDRESS_BOOK_POLICY_CHANGES , ADDRESS_BOOK_POLICY_CHANGES
-
-    val node = Node("SHARED_MBX_ADDRESS_BOOK_POLICY_CHANGES") {
+fun doOperationsForAddressBookPolicy(taskId:String){
+    val node = Node(taskId) {
         styleClass = "row"
         node {
             styleClass = "col-md-12"
@@ -38,6 +40,7 @@ fun main(args: Array<String>) {
                                     emberComponent = EmberComponent.REP_POPUP
                                     mandatory()
                                     label = "address_book_policy"
+                                    placeHolderText = "choose_policy"
                                 }
                             }
                         }
@@ -46,5 +49,5 @@ fun main(args: Array<String>) {
             }
         }
     }
-    node.copyToClipBoard()
+    node.replaceTasksXml()
 }

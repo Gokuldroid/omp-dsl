@@ -10,6 +10,11 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+    doOperationsForLitigationHoldSettings("LITIGATION_HOLD_CHANGES")
+    doOperationsForLitigationHoldSettings("SHARED_MBX_LITIGATION_HOLD_CHANGES")
+}
+
+fun doOperationsForLitigationHoldSettings(taskId:String){
     var litigationHoldUI: Node? = null
     var litigationHoldOptions: Node? = null
     var notesCheck: Node? = null
@@ -17,7 +22,7 @@ fun main(args: Array<String>) {
     var urlCheck: Node? = null
     var url: Node? = null
 
-    Node("LITIGATION_HOLD_CHANGES") {
+    Node(taskId) {
         styleClass = "gsection"
         node("gspan_2_of_4 gcolumn line line-right o365-mb-15") {
             node("o365-ml-40 o365-mb-15") {
@@ -33,7 +38,7 @@ fun main(args: Array<String>) {
                     }
                     node {
                         htmlTag = "span"
-                        label = "litigation_hold"
+                        label = "configure_litigation_hold"
                     }
                 }
             }
@@ -66,11 +71,13 @@ fun main(args: Array<String>) {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "LITIGATION_HOLD_OWNER"
                                 label = "put_on_hold_by"
+                                placeHolderText = "select_owner"
+                                tooltip = "litigation_hold_owner"
                             }
                         }
                     }
                     node {
-                        styleClass = "form-group o365-make-relatiFve o365-mb-5"
+                        styleClass = "form-group o365-make-relative o365-mb-5"
                         node {
                             styleClass = "col-md-4 control-label o365-pt-0"
                             label = "litigation_hold_duration"
@@ -170,7 +177,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(litigationHoldUI!!, litigationHoldOptions!!, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(notesCheck!!, notes!!, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(urlCheck!!, url!!, Action.DISABLE, Condition.EQUAL, "\$false")

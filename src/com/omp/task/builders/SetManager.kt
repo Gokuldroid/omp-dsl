@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
                             node {
                                 htmlTag = "span"
                                 styleClass = "o365-nowrap"
-                                label = "manger"
+                                label = "choose_manger"
                             }
                         }
                         node {
@@ -33,6 +33,7 @@ fun main(args: Array<String>) {
                                 node {
                                     componetId = "MANAGER"
                                     emberComponent = EmberComponent.REP_POPUP
+                                    placeHolderText = "choose_manager"
                                     mandatory()
                                 }
                             }
@@ -42,5 +43,5 @@ fun main(args: Array<String>) {
             }
         }
     }
-    node.copyToClipBoard()
+    node.replaceTasksXml()
 }

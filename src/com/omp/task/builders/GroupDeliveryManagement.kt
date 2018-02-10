@@ -27,9 +27,6 @@ fun main(args: Array<String>) {
                             emberComponent = EmberComponent.CHECK_BOX
                             value = "\$true"
                         }
-                        node("o365-space-1") {
-                            htmlTag = "span"
-                        }
                         node {
                             htmlTag = "span"
                             label = "accept_mail_from"
@@ -95,6 +92,7 @@ fun main(args: Array<String>) {
                                 node {
                                     htmlTag = "span"
                                     label = "overwrite_existing_users"
+                                    tooltip ="overwrite_existing_users"
                                 }
                             }
                         }
@@ -102,7 +100,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(acceptMailFromUI, acceptMailFrom, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(acceptMailFromUI, acceptMailFrom2, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(restrictUsersUI, restrictUsersEle1, Action.DISABLE, Condition.EQUAL, "\$false")

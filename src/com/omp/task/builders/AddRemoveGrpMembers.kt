@@ -21,6 +21,7 @@ fun main(args: Array<String>) {
                                 componetId = "ADD_TO_OFFICE_365_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
                                 label = "select_groups"
+                                placeHolderText ="select_groups"
                             }
                         }
                     }
@@ -34,6 +35,7 @@ fun main(args: Array<String>) {
                                 componetId = "REMOVE_FROM_OFFICE_365_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
                                 label = "select_groups"
+                                placeHolderText = "select_groups"
                             }
                         }
                     }

@@ -4,6 +4,7 @@ import com.omp.task.utils.addParam
 import com.omp.task.utils.newLine
 import com.omp.task.utils.toClipBoard
 import org.apache.commons.lang3.StringEscapeUtils
+import java.io.File
 
 
 /**
@@ -112,7 +113,7 @@ class Node {
     }
 
     fun addRule(trigger: Node?, target: Node?, action: Action, condition: Condition, value: String) {
-        val sb = StringBuilder("<O365LayoutComponentRules ")
+        val sb = StringBuilder("\t<O365LayoutComponentRules ")
         ruleId = ruleId.inc()
         with(sb) {
             addParam("UNIQUE_ID", "O365LayoutComponentRules:UNIQUE_ID:" + taskId + "_" + ruleId)
@@ -152,7 +153,7 @@ class Node {
             tooltip?.also { addParam("TOOL_TIP", "o365.tooltip." + it) }
             placeHolderText?.also { addParam("PLACE_HOLDER_TEXT", "o365.input_fields."+it) }
         }
-        var result = sb.append("/>").trim().toString().newLine()
+        var result = ("\t"+(sb.append("/>").trim().toString())).newLine()
         childNodes.forEach {
             result += it.toString()
         }
@@ -161,7 +162,8 @@ class Node {
 
     companion object {
         var layoutComponentStartId: Int = 0
-        var ruleId: Int = 0;
+        var ruleId: Int = 0
+        val InstallDir = "D:\\newval\\design\\"
     }
 
     fun copyToClipBoard(receiver: (Node.() -> Unit)? = null) {
@@ -170,6 +172,40 @@ class Node {
         receiver?.invoke(this)
         myString += rules.toString()
         myString.toClipBoard()
+    }
+
+    fun replaceTasksXml(receiver: (Node.() -> Unit)?= null){
+        val lines = ArrayList<String>()
+        val oldlines = File(InstallDir +"O365 Manager Plus\\conf\\o365\\management\\O365LayoutComponentGroup.xml").readLines()
+        var isAdded = false
+        oldlines.forEach({
+            if(!it.contains("TASK_ID=\"O365MgmtTasks:TASK_ID:"+taskId+"\"")){
+                lines.add(it)
+            }else if(!isAdded){
+                isAdded = true
+                lines.add(toString()+"\n")
+            }
+        })
+        File(InstallDir +"O365 Manager Plus\\conf\\o365\\management\\O365LayoutComponentGroup.xml").writeText(lines.joinToString(separator = "\n"))
+
+        receiver?.invoke(this)
+        val rules =  rules.toString()
+        if(rules.isNotEmpty()){
+            val ruleslines = ArrayList<String>()
+            val rulesoldlines = File(InstallDir +"O365 Manager Plus\\conf\\o365\\management\\O365LayoutComponentRules.xml").readLines()
+            var isAddedRules = false
+            rulesoldlines.forEach({
+                if(!it.contains("TASK_ID=\"O365MgmtTasks:TASK_ID:"+taskId+"\"")){
+                    ruleslines.add(it)
+                }else if(!isAddedRules){
+                    isAddedRules = true
+                    ruleslines.add(rules+"\n")
+                }
+            })
+            File(InstallDir +"O365 Manager Plus\\conf\\o365\\management\\O365LayoutComponentRules.xml").writeText(ruleslines.joinToString(separator = "\n"))
+        }
+        Node.layoutComponentStartId = 0
+        Node.ruleId = 0
     }
 }
 
