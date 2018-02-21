@@ -43,7 +43,7 @@ fun doChangesForwardTo(taskId: String) {
                                 tbodyNode {
                                     trNode {
                                         tdNode {
-                                            labelNode(" o365-ml-15 width-220") {
+                                            labelNode(" o365-ml-15 width-210") {
                                                 internalFwd = node {
                                                     componetId = "MAILBOX_FWD_TO_INTERNAL"
                                                     emberComponent = EmberComponent.RADIO_GROUP
@@ -68,7 +68,7 @@ fun doChangesForwardTo(taskId: String) {
                         tableNode {
                             trNode {
                                 tdNode {
-                                    labelNode(" o365-ml-15 width-220") {
+                                    labelNode(" o365-ml-15 width-210") {
                                         externalFwd = node {
                                             componetId = "MAILBOX_FWD_TO_EXTERNAL"
                                             emberComponent = EmberComponent.RADIO_GROUP

@@ -34,7 +34,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
         styleClass = "row o365-mb-5"
         node("col-md-6") {
             node("form-horizontal align-left o365-ml-40 line line-right") {
-                node("form-group o365-mb-5") {
+                node("form-group o365-mb-10") {
                     labelNode("control-label") {
                         modifySendUI = node {
                             emberComponent = EmberComponent.CHECK_BOX
@@ -62,7 +62,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                     }
                 }
 
-                node("form-group o365-mb-5") {
+                node("form-group o365-mb-10") {
                     labelNode("control-label") {
                         modifyReceiveUI = node {
                             emberComponent = EmberComponent.CHECK_BOX
@@ -107,7 +107,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                     }
                 }
                 restrictionsGroup = node("o365-make-relative") {
-                    node("form-group o365-mb-5") {
+                    node("form-group o365-mb-10") {
                         labelNode("radio-inline  o365-ml-10") {
                             labelWrapper = "%s<span class=\"o365-space-3\"></span>"
                             label = "accept_message_from"
@@ -120,7 +120,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             value = "All"
                         }
                         spanNode("o365-space-1")
-                        node("o365-inline-block o365-valign-middle") {
+                        node("o365-inline-block o365-valign-middle o365-mtm-2") {
                             acceptMessagesFromUsers = node {
                                 componetId = "ACCEPT_MESSAGES_FROM_USERS"
                                 placeHolderText = "select_senders"
@@ -130,7 +130,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             }
                         }
                     }
-                    node("form-group o365-mb-5") {
+                    node("form-group o365-mb-10") {
                         labelNode("radio-inline  o365-ml-10") {
                             labelWrapper = "%s<span class=\"o365-space-3\"></span>"
                             label = "reject_message_from"
@@ -143,7 +143,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             value = "NoSenders"
                         }
                         spanNode("o365-space-1")
-                        node("o365-inline-block o365-valign-middle") {
+                        node("o365-inline-block o365-valign-middle o365-mtm-2") {
                             rejectMessagesFromUsers = node {
                                 componetId = "REJECT_MESSAGES_FROM_USERS"
                                 placeHolderText = "select_receivers"

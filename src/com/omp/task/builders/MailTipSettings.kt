@@ -10,10 +10,16 @@ import com.omp.task.layout.Node
  */
 
 fun main(args: Array<String>) {
+
+    //
+    doChangesForMailTip("SHARED_MBX_MAILTIP_SETTINGS")
+    doChangesForMailTip("MAILTIP_SETTINGS")
+}
+
+fun doChangesForMailTip(taskId:String){
     var mailtipEnabled: Node? = null
     var mailtip: Node? = null
-    //SHARED_MBX_MAILTIP_SEETINGS
-    Node("MAILTIP_SETTINGS") {
+    Node(taskId) {
         styleClass = "row"
         node("col-md-12") {
             node("static-container center-block o365-pl-25") {
@@ -22,7 +28,7 @@ fun main(args: Array<String>) {
                         labelNode("col-md-4 control-label o365-pt-0") {
                             label = "set_remove_mailtip"
                         }
-                        node("col-md-7 o365-valign-top") {
+                        node("col-md-7 o365-valign-top mailtip-radio") {
                             mailtipEnabled = node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "IS_MAILTIP_ENABLED"
@@ -45,7 +51,7 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(mailtipEnabled, mailtip, Action.HIDE, Condition.EQUAL, "\$false")
     })
 }

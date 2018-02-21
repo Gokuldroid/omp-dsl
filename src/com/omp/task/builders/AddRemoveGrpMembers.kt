@@ -14,7 +14,82 @@ fun main(args: Array<String>) {
                 node("form-horizontal align-right o365-ml-m22") {
                     node("form-group") {
                         labelNode("col-md-4 control-label") {
-                            label = "add_to_group"
+                            label = "add_to_groups"
+                        }
+                        node("col-md-7") {
+                            node {
+                                componetId = "ADD_TO_DIST_GROUP"
+                                emberComponent = EmberComponent.REP_POPUP
+                                label = "select_groups"
+                                placeHolderText ="select_groups"
+                            }
+                        }
+                    }
+
+                    node("form-group") {
+                        labelNode("col-md-4 control-label") {
+                            label = "remove_from_groups"
+                        }
+                        node("col-md-7") {
+                            node {
+                                componetId = "REMOVE_FROM_DIST_GROUP"
+                                emberComponent = EmberComponent.REP_POPUP
+                                label = "select_groups"
+                                placeHolderText = "select_groups"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }.replaceTasksXml()
+
+
+    Node("ADD_REMOVE_MAIL_ENALBED_GRP_MEMBERS") {
+        styleClass = "row"
+        node("col-md-12") {
+            node("static-container-sm center-block") {
+                node("form-horizontal align-right o365-ml-m22") {
+                    node("form-group") {
+                        labelNode("col-md-4 control-label") {
+                            label = "add_to_groups"
+                        }
+                        node("col-md-7") {
+                            node {
+                                componetId = "ADD_TO_MAIL_ENABLED_SECURITY_GROUP"
+                                emberComponent = EmberComponent.REP_POPUP
+                                label = "select_groups"
+                                placeHolderText ="select_groups"
+                            }
+                        }
+                    }
+
+                    node("form-group") {
+                        labelNode("col-md-4 control-label") {
+                            label = "remove_from_groups"
+                        }
+                        node("col-md-7") {
+                            node {
+                                componetId = "REMOVE_FROM_MAIL_ENABLED_SECURITY_GROUP"
+                                emberComponent = EmberComponent.REP_POPUP
+                                label = "select_groups"
+                                placeHolderText = "select_groups"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }.replaceTasksXml()
+
+    Node("ADD_REMOVE_OFFICE_365_GRP_MEMBERS") {
+        styleClass = "row"
+        node("col-md-12") {
+            node("static-container-sm center-block") {
+                node("form-horizontal align-right o365-ml-m22") {
+                    node("form-group") {
+                        labelNode("col-md-4 control-label") {
+                            label = "add_to_groups"
                         }
                         node("col-md-7") {
                             node {
@@ -28,7 +103,7 @@ fun main(args: Array<String>) {
 
                     node("form-group") {
                         labelNode("col-md-4 control-label") {
-                            label = "remove_from_group"
+                            label = "remove_from_groups"
                         }
                         node("col-md-7") {
                             node {
@@ -42,5 +117,5 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.replaceTasksXml()
 }

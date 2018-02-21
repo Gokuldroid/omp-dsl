@@ -18,7 +18,7 @@ fun doChangesFor(taskId:String){
         styleClass = "row"
         node("col-md-12") {
             node {
-                styleClass= "o365-ml-50"
+                styleClass= "o365-ml-40"
                 label = "select_users_permissions"
                 componetId = "ADD_REMOVE_PERMISSION_SELECTION"
                 emberComponent = EmberComponent.ADD_REMOVE_PERMISSIONS

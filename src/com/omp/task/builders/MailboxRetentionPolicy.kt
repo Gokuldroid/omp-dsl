@@ -96,7 +96,7 @@ fun doOperationsForRetentionPolicy(taskId:String){
                         }
                         node("col-md-7 o365-valign-top") {
                             node {
-                                styleClass = "form-control o365-ml-10"
+                                styleClass = "form-control o365-ml-10 retention-comment"
                                 componetId = "RETENTION_COMMENT"
                                 emberComponent = EmberComponent.TEXT
                             }

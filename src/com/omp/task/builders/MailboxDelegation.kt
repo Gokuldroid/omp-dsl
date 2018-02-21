@@ -40,7 +40,7 @@ fun doOperationsForDeligations(taskId:String){
                                     componetId = "MODIFY_SEND_AS_UI"
                                     value = "\$false"
                                 }
-                                spanNode("o365-space-2")
+                                spanNode("o365-space-1")
                                 spanNode {
                                     label = "modify_send_as"
                                 }
@@ -75,7 +75,7 @@ fun doOperationsForDeligations(taskId:String){
                                     componetId = "MODIFY_SEND_ON_BEHALF_UI"
                                     value = "\$false"
                                 }
-                                spanNode("o365-space-2")
+                                spanNode("o365-space-1")
                                 spanNode {
                                     label = "modify_send_on_behalf"
                                 }
@@ -107,17 +107,17 @@ fun doOperationsForDeligations(taskId:String){
         }
         node("col-md-6") {
             node("line line-right o365-ml-m40 o365-pr-20") {
-                node("form-horizontal  o365-ml-40 o365-pl-30 align-left") {
+                node("form-horizontal  o365-ml-40 o365-pl-40 align-left") {
                     //full access
                     node("form-group o365-mb-5 o365-make-relative") {
-                        labelNode("col-md-4 control-label o365-pt-0") {
+                        labelNode("col-md-3 control-label o365-pt-0") {
                             spanNode("o365-nowrap") {
                                 modifyFullAccess = node {
                                     emberComponent = EmberComponent.CHECK_BOX
                                     componetId = "MODIFY_FULL_ACCESS_UI"
                                     value = "\$false"
                                 }
-                                spanNode("o365-space-2")
+                                spanNode("o365-space-1")
                                 spanNode {
                                     label = "modify_full_access"
                                 }
@@ -133,7 +133,7 @@ fun doOperationsForDeligations(taskId:String){
                         }
                     }
                     node("form-group o365-make-relative") {
-                        fullAccessMembers = node("col-md-7 col-md-offset-4 o365-valign-top") {
+                        fullAccessMembers = node("col-md-7 col-md-offset-3 o365-valign-top") {
                             disabled()
                             node {
                                 emberComponent = EmberComponent.REP_POPUP

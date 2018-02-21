@@ -61,7 +61,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
                     }
                     node("form-group o365-make-relative") {
                         node {
-                            styleClass = "col-md-4 control-label o365-pt-0"
+                            styleClass = "col-md-4 control-label"
                             label = "put_on_hold_by"
                             htmlTag = "label"
                         }
@@ -79,7 +79,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
                     node {
                         styleClass = "form-group o365-make-relative o365-mb-5"
                         node {
-                            styleClass = "col-md-4 control-label o365-pt-0"
+                            styleClass = "col-md-4 control-label"
                             label = "litigation_hold_duration"
                             htmlTag = "label"
                         }
