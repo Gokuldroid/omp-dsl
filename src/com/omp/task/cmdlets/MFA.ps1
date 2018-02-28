@@ -1,4 +1,4 @@
-if(%ismfaenabled% -ne 'Disable'){
+if(%ismfaenabled% -ne 'Disabled'){
     $hasDefault=$false;
     $st= New-Object Microsoft.Online.Administration.StrongAuthenticationRequirement;
     $st.RelyingParty= '*';

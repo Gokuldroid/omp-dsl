@@ -40,7 +40,7 @@ fun doOperationsForDeligations(taskId:String){
                                     componetId = "MODIFY_SEND_AS_UI"
                                     value = "\$false"
                                 }
-                                spanNode("o365-space-1")
+                                spanNode("o365-space-2")
                                 spanNode {
                                     label = "modify_send_as"
                                 }
@@ -75,7 +75,7 @@ fun doOperationsForDeligations(taskId:String){
                                     componetId = "MODIFY_SEND_ON_BEHALF_UI"
                                     value = "\$false"
                                 }
-                                spanNode("o365-space-1")
+                                spanNode("o365-space-2")
                                 spanNode {
                                     label = "modify_send_on_behalf"
                                 }
@@ -117,7 +117,7 @@ fun doOperationsForDeligations(taskId:String){
                                     componetId = "MODIFY_FULL_ACCESS_UI"
                                     value = "\$false"
                                 }
-                                spanNode("o365-space-1")
+                                spanNode("o365-space-2")
                                 spanNode {
                                     label = "modify_full_access"
                                 }

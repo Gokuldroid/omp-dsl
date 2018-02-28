@@ -54,7 +54,7 @@ fun doOperationsForAuditSettings(taskId:String){
                         }
                     }
                     node("form-group o365-make-relative") {
-                        labelNode("col-md-4 control-label o365-pt-0") {
+                        labelNode("col-md-4 control-label") {
                             spanNode("o365-nowrap") {
                                 ageUI = node {
                                     componetId = "MODIFY_AUDIT_LOG_AGE_LIMIT"
@@ -97,6 +97,7 @@ fun doOperationsForAuditSettings(taskId:String){
                             spanNode {
                                 label = "for_mailbox_delegates"
                             }
+                            node("o365-space-3")
                         }
                     }
                     delegate = node("form-column o365-valign-top o365-make-relative") {

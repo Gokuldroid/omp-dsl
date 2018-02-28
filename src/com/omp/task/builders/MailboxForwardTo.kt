@@ -55,6 +55,7 @@ fun doChangesForwardTo(taskId: String) {
                                                 componetId = "MAILBOX_FWD_TO_INTERNAL_ADDRESS"
                                                 emberComponent = EmberComponent.REP_POPUP
                                                 placeHolderText = "choose_address"
+                                                label = "choose_address"
                                                 mandatory()
                                                 disabled()
                                             }

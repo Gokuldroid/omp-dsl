@@ -62,7 +62,7 @@ fun doOperationsForAutoReply(taskId:String){
                                     }
                                     node {
                                         label = "o365.input_fields.outside_org"
-                                        labelWrapper = "%s <i class=\"o365-inline-icon icn-tick-green o365-mr-m10\"></i>"
+                                        labelWrapper = "%s <i class=\"o365-inline-icon o365-mr-m10\" id='enable_outside_org'></i>"
                                         node {
                                             styleClass = "o365-mb-5"
                                             labelNode("checkbox-inline") {
@@ -135,5 +135,6 @@ fun doOperationsForAutoReply(taskId:String){
         addRule(autoReplyOption, container1, Action.HIDE, Condition.EQUAL, "\$false")
         addRule(enableAutoReplyOutside, outsideMsg, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(sendAutoReply, autoReplyDuration, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(enableAutoReplyOutside,container1,Action.SHOW_TICK,Condition.EQUAL,"\$true")
     })
 }

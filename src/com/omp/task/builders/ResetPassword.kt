@@ -9,13 +9,13 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
-    var random:Node? = null
-    var password:Node? = null
+    var random: Node? = null
+    var password: Node? = null
 
-    var radioGrp1:Node? =null
-    var radioGrp2:Node? =null
+    var radioGrp1: Node? = null
+    var radioGrp2: Node? = null
 
-    var restPass:Node? = null
+    var restPass: Node? = null
 
     Node("RESET_PASSWORD") {
         styleClass = "row o365-mb-5"
@@ -51,7 +51,7 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
-                    radioGrp2 =node("form-group o365-make-relative o365-mb-0") {
+                    radioGrp2 = node("form-group o365-make-relative o365-mb-0") {
                         tableNode {
                             tbodyNode {
                                 trNode {
@@ -64,8 +64,9 @@ fun main(args: Array<String>) {
                                     }
                                     password = tdNode {
                                         hide()
-                                         node("input-md o365-ml-40 form-control") {
+                                        node("input-md o365-ml-40 form-control") {
                                             componetId = "NEW_PASSWORD"
+                                            mandatory()
                                             emberComponent = EmberComponent.TEXT
                                         }
                                     }
@@ -128,9 +129,9 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard({
-        addRule(random,password,Action.HIDE,Condition.EQUAL,"RandomPassword")
-        addRule(restPass,radioGrp1,Action.DISABLE,Condition.EQUAL,"\$false")
-        addRule(restPass,radioGrp2,Action.DISABLE,Condition.EQUAL,"\$false")
+    }.replaceTasksXml({
+        addRule(random, password, Action.HIDE, Condition.EQUAL, "RandomPassword")
+        addRule(restPass, radioGrp1, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(restPass, radioGrp2, Action.DISABLE, Condition.EQUAL, "\$false")
     })
 }

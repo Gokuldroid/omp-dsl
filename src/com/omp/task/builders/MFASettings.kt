@@ -28,7 +28,7 @@ fun main(args: Array<String>) {
                             enabled = node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "IS_MFA_ENABLED"
-                                value = "Enforce"
+                                value = "Enforced"
                                 mandatory()
                             }
                         }
@@ -125,7 +125,7 @@ fun main(args: Array<String>) {
 //                }
 //            }
 //        }
-    }.copyToClipBoard({
+    }.replaceTasksXml({
         addRule(enabled,options1,Action.HIDE,Condition.EQUAL,"Disabled")
         addRule(enabled,options2,Action.HIDE,Condition.EQUAL,"Disabled")
     })

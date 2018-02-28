@@ -69,7 +69,7 @@ fun doOperationsForRetentionPolicy(taskId:String){
                                 componetId = "RETENTION_HOLD_ENABLED"
                                 emberComponent = EmberComponent.CHECK_BOX
                             }
-                            spanNode("o365-space-1")
+                            spanNode("o365-space-2")
                             spanNode {
                                 label = "enable_retention_hold"
                             }

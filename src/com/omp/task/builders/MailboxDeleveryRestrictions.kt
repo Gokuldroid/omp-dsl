@@ -11,6 +11,7 @@ import com.omp.task.layout.Node
 fun main(args: Array<String>) {
     doChangesForDeluiveryRestrictions("MAILBOX_MESSAGE_SIZE_RESTRICTION")
     doChangesForDeluiveryRestrictions("SHARED_MBX_MESSAGE_SIZE_RESTRICTION")
+    //modify-delivery-restrictions.html
 }
 
 fun doChangesForDeluiveryRestrictions(taskId:String){
@@ -41,7 +42,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             componetId = "MODIFY_SEND_MESSAGE_SIZE_UI"
                             value = "\$true"
                         }
-                        spanNode("o365-space-1")
+                        spanNode("o365-space-2")
                         spanNode("o365-thin-bold") {
                             label = "modify_send_message_size"
                         }
@@ -69,7 +70,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             componetId = "MODIFY_RECEIVE_MESSAGE_SIZE_UI"
                             value = "\$true"
                         }
-                        spanNode("o365-space-1")
+                        spanNode("o365-space-2")
                         spanNode("o365-thin-bold") {
                             label = "modify_receive_message_size"
                         }
@@ -100,7 +101,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             componetId = "MODIFY_MESSAGE_RESTRICTIONS"
                             value = "\$true"
                         }
-                        spanNode("o365-space-1")
+                        spanNode("o365-space-2")
                         spanNode("o365-thin-bold") {
                             label = "modify_message_restrictions"
                         }

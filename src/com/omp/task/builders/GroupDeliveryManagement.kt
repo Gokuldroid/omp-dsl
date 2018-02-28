@@ -27,6 +27,7 @@ fun main(args: Array<String>) {
                             emberComponent = EmberComponent.CHECK_BOX
                             value = "\$true"
                         }
+                        spanNode("o365-space-2")
                         node {
                             htmlTag = "span"
                             label = "accept_mail_from"
@@ -60,7 +61,7 @@ fun main(args: Array<String>) {
                                 emberComponent = EmberComponent.CHECK_BOX
                                 value = "\$false"
                             }
-                            node("o365-space-1") {
+                            node("o365-space-2") {
                                 htmlTag = "span"
                             }
                             node {
@@ -86,9 +87,7 @@ fun main(args: Array<String>) {
                                     componetId = "OVERWRITE_EXISTING_USERS"
                                     emberComponent = EmberComponent.CHECK_BOX
                                 }
-                                node("o365-space-1") {
-                                    htmlTag = "span"
-                                }
+                                spanNode("o365-space-1")
                                 node {
                                     htmlTag = "span"
                                     label = "overwrite_existing_users"
