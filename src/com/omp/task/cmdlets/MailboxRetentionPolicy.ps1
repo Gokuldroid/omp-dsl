@@ -4,7 +4,16 @@ if(%retentionholdenabled%){
     $Parms.RetentionHoldEnabled = $true;
     $Parms.retentioncomment = %retentioncomment%;
 }
-$Parms.RetentionPolicy = %retentionpolicy%;
-$Parms.retentionurl = %retentionurl%;
-$Parms.retaindeleteditemsfor = %retaindeleteditemsfor%;
-Set-Mailbox @Parms %retentionholdduration:#startdateforretentionhold,enddateforretentionhold#%   -force;
+$RetentionPolicy =  %retentionpolicy%;
+$Retentionurl =  %retentionurl%;
+$Retaindeleteditemsfor = %retaindeleteditemsfor%;
+if($RetentionPolicy -ne $null){
+    $Parms.RetentionPolicy = %retentionpolicy%;
+}
+if($Retentionurl -ne $null){
+    $Parms.Retentionurl = %retentionurl%;
+}
+if($Retaindeleteditemsfor -ne $null){
+    $Parms.Retaindeleteditemsfor = %retaindeleteditemsfor%;
+}
+Set-Mailbox @Parms %retentionholdduration:#startdateforretentionhold,enddateforretentionhold#%  -force;

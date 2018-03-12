@@ -11,6 +11,6 @@ if($AddToGroups -ne $null){
 if($RemoveFromGroups -ne $null){
     $RemoveFromGroups = $RemoveFromGroups.split(',');
     foreach($group in $RemoveFromGroups){
-        Add-DistributionGroupMember -Identity $group -Member $userprincipalname;
+        Remove-DistributionGroupMember -Identity $group -Member $userprincipalname -Confirm:$false;
     }
 }

@@ -7,7 +7,12 @@ import com.omp.task.layout.Node
  * Created by gokul-4192.
  */
 fun main(args: Array<String>) {
-    Node("MAILBOX_CONVERSION") {
+    doChangesForMailboxConversion("MAILBOX_CONVERSION")
+    doChangesForMailboxConversion("SHARED_MBX_CONVERSION")
+}
+
+fun doChangesForMailboxConversion(taskId:String){
+    Node(taskId) {
         styleClass = "row o365-mb-5"
         node("static-container-xs center-block") {
             node("form-horizontal o365-ml-m20 align-right") {
@@ -26,5 +31,6 @@ fun main(args: Array<String>) {
                 }
             }
         }
-    }.copyToClipBoard()
+    }.replaceTasksXml()
+
 }

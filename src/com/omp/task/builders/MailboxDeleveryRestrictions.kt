@@ -58,6 +58,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                         sendLimit = node {
                             componetId = "MAX_SEND_SIZE"
                             emberComponent = EmberComponent.SIZE
+                            mandatory()
                             disabled()
                         }
                     }
@@ -87,6 +88,7 @@ fun doChangesForDeluiveryRestrictions(taskId:String){
                             componetId = "MAX_RECEIVE_SIZE"
                             emberComponent = EmberComponent.SIZE
                             disabled()
+                            mandatory()
                         }
                     }
                 }

@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "ADD_TO_DIST_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
-                                label = "select_groups"
+                                label = "add_to_groups"
                                 placeHolderText ="select_groups"
                             }
                         }
@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "REMOVE_FROM_DIST_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
-                                label = "select_groups"
+                                label = "remove_from_groups"
                                 placeHolderText = "select_groups"
                             }
                         }
@@ -58,7 +58,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "ADD_TO_MAIL_ENABLED_SECURITY_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
-                                label = "select_groups"
+                                label = "add_to_groups"
                                 placeHolderText ="select_groups"
                             }
                         }
@@ -72,7 +72,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "REMOVE_FROM_MAIL_ENABLED_SECURITY_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
-                                label = "select_groups"
+                                label = "remove_from_groups"
                                 placeHolderText = "select_groups"
                             }
                         }
@@ -95,7 +95,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "ADD_TO_OFFICE_365_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
-                                label = "select_groups"
+                                label = "add_to_groups"
                                 placeHolderText ="select_groups"
                             }
                         }
@@ -109,7 +109,7 @@ fun main(args: Array<String>) {
                             node {
                                 componetId = "REMOVE_FROM_OFFICE_365_GROUP"
                                 emberComponent = EmberComponent.REP_POPUP
-                                label = "select_groups"
+                                label = "remove_from_groups"
                                 placeHolderText = "select_groups"
                             }
                         }

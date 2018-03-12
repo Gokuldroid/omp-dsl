@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
                             node {
                                 htmlTag = "span"
                                 styleClass = "o365-nowrap"
-                                label = "choose_manger"
+                                label = "choose_manager"
                             }
                         }
                         node {
