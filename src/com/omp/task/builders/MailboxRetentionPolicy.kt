@@ -43,6 +43,7 @@ fun doOperationsForRetentionPolicy(taskId:String){
                             emberComponent = EmberComponent.TEXT
                             componetId = "RETENTION_URL"
                             styleClass = "form-control o365-inline-block"
+                            tooltip = "litigation_hold_url"
                         }
                     }
                 }

@@ -14,13 +14,16 @@ fun main(args: Array<String>) {
     doOperationsForLitigationHoldSettings("SHARED_MBX_LITIGATION_HOLD_CHANGES")
 }
 
-fun doOperationsForLitigationHoldSettings(taskId:String){
+fun doOperationsForLitigationHoldSettings(taskId: String) {
     var litigationHoldUI: Node? = null
     var litigationHoldOptions: Node? = null
     var notesCheck: Node? = null
     var notes: Node? = null
     var urlCheck: Node? = null
     var url: Node? = null
+    var isEnabled: Node? = null
+    var owner: Node? = null
+    var duration: Node? = null
 
     Node(taskId) {
         styleClass = "gsection"
@@ -52,7 +55,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
                         }
                         node {
                             styleClass = "col-md-7 o365-valign-top"
-                            node {
+                            isEnabled = node {
                                 emberComponent = EmberComponent.RADIO_GROUP
                                 componetId = "LITIGATION_HOLD_ENABLED"
                                 value = "\$true"
@@ -67,7 +70,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
                         }
                         node {
                             styleClass = "col-md-7 o365-valign-top"
-                            node {
+                            owner = node {
                                 emberComponent = EmberComponent.REP_POPUP
                                 componetId = "LITIGATION_HOLD_OWNER"
                                 label = "put_on_hold_by"
@@ -76,8 +79,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
                             }
                         }
                     }
-                    node {
-                        styleClass = "form-group o365-make-relative o365-mb-5"
+                    node("form-group o365-make-relative o365-mb-5") {
                         node {
                             styleClass = "col-md-4 control-label"
                             label = "litigation_hold_duration"
@@ -85,7 +87,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
                         }
                         node {
                             styleClass = "col-md-7 o365-valign-top"
-                            node("input-md o365-mxw-60") {
+                            duration = node("input-md o365-mxw-60") {
                                 emberComponent = EmberComponent.TEXT
                                 componetId = "LITIGATION_HOLD_DURATION"
                                 tooltip = "litigation_hold_duration"
@@ -181,5 +183,7 @@ fun doOperationsForLitigationHoldSettings(taskId:String){
         addRule(litigationHoldUI!!, litigationHoldOptions!!, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(notesCheck!!, notes!!, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(urlCheck!!, url!!, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(isEnabled!!,owner!!,Action.DISABLE,Condition.EQUAL,"\$false")
+        addRule(isEnabled!!,duration!!,Action.DISABLE,Condition.EQUAL,"\$false")
     })
 }
