@@ -16,6 +16,8 @@ fun main(args: Array<String>) {
     var restrictUsersUI: Node? = null
     var restrictUsersEle1: Node? = null
     var restrictUsersEle2: Node? = null
+    var restrictUsersEle3 : Node ? = null
+
     Node("GROUP_ACCEPT_MAIL_FROM") {
         styleClass = "row"
         node("col-md-6") {
@@ -83,7 +85,8 @@ fun main(args: Array<String>) {
                         node("col-md-8 col-md-offset-4") {
                             restrictUsersEle2 = labelNode("o365-ml-m40") {
                                 disabled()
-                                node {
+                                restrictUsersEle3 = node {
+                                    disabled()
                                     componetId = "OVERWRITE_EXISTING_USERS"
                                     emberComponent = EmberComponent.CHECK_BOX
                                 }
@@ -104,5 +107,6 @@ fun main(args: Array<String>) {
         addRule(acceptMailFromUI, acceptMailFrom2, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(restrictUsersUI, restrictUsersEle1, Action.DISABLE, Condition.EQUAL, "\$false")
         addRule(restrictUsersUI, restrictUsersEle2, Action.DISABLE, Condition.EQUAL, "\$false")
+        addRule(restrictUsersUI, restrictUsersEle3, Action.DISABLE, Condition.EQUAL, "\$false")
     })
 }

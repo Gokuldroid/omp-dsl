@@ -26,7 +26,7 @@ fun doChangesForwardTo(taskId: String) {
         node("col-md-6") {
             node("o365-ml-30 o365-pr-30") {
                 node("form-horizontal align-left") {
-                    node("form-group") {
+                    node("form-group o365-mb-10") {
                         node("col-md-12") {
                             labelNode {
                                 dontFwd = node {
