@@ -163,7 +163,7 @@ class Node {
     companion object {
         var layoutComponentStartId: Int = 0
         var ruleId: Int = 0
-        val InstallDir = "D:\\newval\\partha review\\"
+        val InstallDir = "D:\\newval\\head 3\\"
     }
 
     fun copyToClipBoard(receiver: (Node.() -> Unit)? = null) {
@@ -202,6 +202,9 @@ class Node {
                     ruleslines.add(rules+"\n")
                 }
             })
+            if(isAddedRules.not()){
+                ruleslines.add(rules +"\n")
+            }
             File(InstallDir +"O365 Manager Plus\\conf\\o365\\management\\O365LayoutComponentRules.xml").writeText(ruleslines.joinToString(separator = "\n"))
         }
         Node.layoutComponentStartId = 0
