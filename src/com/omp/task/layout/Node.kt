@@ -163,7 +163,7 @@ class Node {
     companion object {
         var layoutComponentStartId: Int = 0
         var ruleId: Int = 0
-        val InstallDir = "D:\\newval\\head 3\\"
+        val InstallDir = "D:\\newval\\32 bit notification\\"
     }
 
     fun copyToClipBoard(receiver: (Node.() -> Unit)? = null) {

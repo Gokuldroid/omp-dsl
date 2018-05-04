@@ -26,71 +26,73 @@ fun doOperationsForLitigationHoldSettings(taskId: String) {
     var duration: Node? = null
 
     Node(taskId) {
-        styleClass = "gsection"
-        node("gspan_2_of_4 gcolumn line line-right o365-mb-15") {
-            node("o365-ml-40 o365-mb-15") {
-                node("checkbox-inline") {
-                    htmlTag = "label"
-                    litigationHoldUI = node {
-                        componetId = "LITIGATION_HOLD_SETTINGS_UI"
-                        emberComponent = EmberComponent.CHECK_BOX
-                        value = "\$true"
-                    }
-                    node("o365-space-1") {
-                        htmlTag = "span"
-                    }
-                    node {
-                        htmlTag = "span"
-                        label = "configure_litigation_hold"
+        styleClass = "row"
+        node("col-md-6 gcolumn o365-mb-15") {
+            node("line line-right o365-ml-m40"){
+                node("o365-ml-60 o365-mb-15") {
+                    node("checkbox-inline") {
+                        htmlTag = "label"
+                        litigationHoldUI = node {
+                            componetId = "LITIGATION_HOLD_SETTINGS_UI"
+                            emberComponent = EmberComponent.CHECK_BOX
+                            value = "\$true"
+                        }
+                        node("o365-space-1") {
+                            htmlTag = "span"
+                        }
+                        node {
+                            htmlTag = "span"
+                            label = "configure_litigation_hold"
+                        }
                     }
                 }
-            }
-            node("o365-ml-60 o365-pr-20") {
-                litigationHoldOptions = node("form-horizontal align-right o365-make-relative") {
-                    node("form-group") {
-                        node {
-                            styleClass = "col-md-4 control-label o365-pt-0"
-                            label = "litigation_hold"
-                            htmlTag = "label"
-                        }
-                        node {
-                            styleClass = "col-md-7 o365-valign-top"
-                            isEnabled = node {
-                                emberComponent = EmberComponent.RADIO_GROUP
-                                componetId = "LITIGATION_HOLD_ENABLED"
-                                value = "\$true"
+                node("o365-ml-60 o365-pr-20") {
+                    litigationHoldOptions = node("form-horizontal align-right o365-make-relative") {
+                        node("form-group") {
+                            node {
+                                styleClass = "col-md-4 control-label o365-pt-0"
+                                label = "litigation_hold"
+                                htmlTag = "label"
+                            }
+                            node {
+                                styleClass = "col-md-7 o365-valign-top"
+                                isEnabled = node {
+                                    emberComponent = EmberComponent.RADIO_GROUP
+                                    componetId = "LITIGATION_HOLD_ENABLED"
+                                    value = "\$true"
+                                }
                             }
                         }
-                    }
-                    node("form-group o365-make-relative") {
-                        node {
-                            styleClass = "col-md-4 control-label"
-                            label = "put_on_hold_by"
-                            htmlTag = "label"
-                        }
-                        node {
-                            styleClass = "col-md-7 o365-valign-top"
-                            owner = node {
-                                emberComponent = EmberComponent.REP_POPUP
-                                componetId = "LITIGATION_HOLD_OWNER"
+                        node("form-group o365-make-relative") {
+                            node {
+                                styleClass = "col-md-4 control-label"
                                 label = "put_on_hold_by"
-                                placeHolderText = "select_owner"
-                                tooltip = "litigation_hold_owner"
+                                htmlTag = "label"
+                            }
+                            node {
+                                styleClass = "col-md-7 o365-valign-top"
+                                owner = node {
+                                    emberComponent = EmberComponent.REP_POPUP
+                                    componetId = "LITIGATION_HOLD_OWNER"
+                                    label = "put_on_hold_by"
+                                    placeHolderText = "select_owner"
+                                    tooltip = "litigation_hold_owner"
+                                }
                             }
                         }
-                    }
-                    node("form-group o365-make-relative o365-mb-5") {
-                        node {
-                            styleClass = "col-md-4 control-label"
-                            label = "litigation_hold_duration"
-                            htmlTag = "label"
-                        }
-                        node {
-                            styleClass = "col-md-7 o365-valign-top"
-                            duration = node("input-md o365-mxw-60") {
-                                emberComponent = EmberComponent.TEXT
-                                componetId = "LITIGATION_HOLD_DURATION"
-                                tooltip = "litigation_hold_duration"
+                        node("form-group o365-make-relative o365-mb-5") {
+                            node {
+                                styleClass = "col-md-4 control-label"
+                                label = "litigation_hold_duration"
+                                htmlTag = "label"
+                            }
+                            node {
+                                styleClass = "col-md-7 o365-valign-top"
+                                duration = node("input-md o365-mxw-60") {
+                                    emberComponent = EmberComponent.TEXT
+                                    componetId = "LITIGATION_HOLD_DURATION"
+                                    tooltip = "litigation_hold_duration"
+                                }
                             }
                         }
                     }
@@ -98,7 +100,7 @@ fun doOperationsForLitigationHoldSettings(taskId: String) {
             }
         }
         node {
-            styleClass = "gspan_2_of_4 gcolumn"
+            styleClass = "col-md-6 gcolumn"
             node {
                 styleClass = "form-layout align-left"
                 node {
