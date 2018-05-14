@@ -26,7 +26,7 @@ if(%ismfaenabled% -ne 'Disabled'){
     };
     Set-MsolUser -UserPrincipalName %userprincipalname% -StrongAuthenticationRequirements @($st) -StrongAuthenticationMethods $methodsArray;
 }else {
-    Set-MsolUser -UserPrincipalName %userprincipalname% -StrongAuthenticationRequirements @();
+    Set-MsolUser -UserPrincipalName %userprincipalname% -StrongAuthenticationRequirements @() -StrongAuthenticationMethods @();
 }
 
 

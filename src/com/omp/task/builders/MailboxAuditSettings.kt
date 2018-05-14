@@ -69,6 +69,7 @@ fun doOperationsForAuditSettings(taskId:String){
                         age = node("col-md-7 o365-valign-top o365-make-relative") {
                             disabled()
                             node {
+                                mandatory()
                                 componetId = "AUDIT_LOG_AGE_LIMIT"
                                 styleClass = "input-md o365-mxw-60"
                                 emberComponent = EmberComponent.TEXT

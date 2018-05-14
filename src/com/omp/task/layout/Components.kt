@@ -17,7 +17,8 @@ enum class EmberComponent(val componentName: String, val handler: String) {
     CUSTOM_ATTRIBUTES("management.input.custom-attributes", "SingleLineComponent"),
     SIZE("management.input.size-input","SingleLineComponent"),
     RT_EDITOR("management.input.rt-editor","SingleLineComponent"),
-    ADD_REMOVE_PERMISSIONS("management.input.add-remove-permissions","ReportPopupComponent")
+    ADD_REMOVE_PERMISSIONS("management.input.add-remove-permissions","ReportPopupComponent"),
+    SMTP_ADDRESSES("management.input.smtp-addresses","SingleLineComponent")
 }
 
 class AbsTractComponent() {

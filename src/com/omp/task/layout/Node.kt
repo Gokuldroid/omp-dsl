@@ -1,5 +1,6 @@
 package com.omp.task.layout
 
+import com.omp.task.utils.InstallDir
 import com.omp.task.utils.addParam
 import com.omp.task.utils.newLine
 import com.omp.task.utils.toClipBoard
@@ -163,7 +164,6 @@ class Node {
     companion object {
         var layoutComponentStartId: Int = 0
         var ruleId: Int = 0
-        val InstallDir = "D:\\newval\\32 bit notification\\"
     }
 
     fun copyToClipBoard(receiver: (Node.() -> Unit)? = null) {

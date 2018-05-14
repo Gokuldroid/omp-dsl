@@ -27,7 +27,7 @@ fun doOperationsForLitigationHoldSettings(taskId: String) {
 
     Node(taskId) {
         styleClass = "row"
-        node("col-md-6 gcolumn o365-mb-15") {
+        node("col-md-6 gcolumn gokul o365-mb-15") {
             node("line line-right o365-ml-m40"){
                 node("o365-ml-60 o365-mb-15") {
                     node("checkbox-inline") {
